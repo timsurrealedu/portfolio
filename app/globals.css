@@ -300,3 +300,20 @@ code { background: var(--panel-2); color: var(--yellow); padding: .1rem .25rem; 
   .terminal-body > p { display: none; }
   .terminal-body form { grid-column: 1 / -1; }
 }
+/* Mechanical motion pass: discrete terminal frames, never soft fades. */
+.boot-screen { animation: boot-eject .88s steps(8, end) both; }
+.boot-log p { animation-timing-function: steps(3, end); }
+.boot-meter i { animation-timing-function: steps(7, end); }
+.hero-actions button, .hero-actions a, .contact-action { transition: none; }
+.hero-actions button:hover, .hero-actions a:hover, .contact-action:hover { animation: key-press .16s steps(2, end) both; }
+.hero-actions button:active, .hero-actions a:active, .contact-action:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--line); }
+.inspect-link, .terminal button, .terminal-toggle { transition: none; }
+.inspect-link:hover, .terminal button:hover, .terminal-toggle:hover { animation: key-press .14s steps(2, end) both; }
+@keyframes boot-eject {
+  0%, 82% { clip-path: inset(0 0 0 0); }
+  100% { clip-path: inset(100% 0 0 0); visibility: hidden; }
+}
+@keyframes key-press {
+  0% { transform: translate(0); box-shadow: 6px 6px 0 var(--orange); }
+  50%, 100% { transform: translate(3px, 3px); box-shadow: 3px 3px 0 var(--orange); }
+}
