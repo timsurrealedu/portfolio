@@ -11,6 +11,7 @@ const skills = [
 ] as const;
 
 export function PortfolioShell() {
+  const [booting, setBooting] = useState(true);
   const [section, setSection] = useState<SectionId>("home");
   const [selected, setSelected] = useState(0);
   const [command, setCommand] = useState("");
@@ -21,6 +22,9 @@ export function PortfolioShell() {
   useEffect(() => {
     const id = window.location.hash.slice(1) as SectionId;
     if (sections.some((item) => item.id === id)) setSection(id);
+    const delay = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 50 : 1150;
+    const timer = window.setTimeout(() => setBooting(false), delay);
+    return () => window.clearTimeout(timer);
   }, []);
 
   function navigate(id: SectionId, echo = true) {
@@ -54,7 +58,8 @@ export function PortfolioShell() {
   }
 
   return (
-    <div className="site-shell">
+    <div className="site-shell" aria-busy={booting}>
+      {booting && <BootScreen />}
       <a className="skip-link" href="#viewport">Skip to content</a>
       <header className="topbar">
         <a className="brand" href="#home" onClick={() => navigate("home", false)} aria-label="Timothy portfolio home">
@@ -142,6 +147,23 @@ export function PortfolioShell() {
   );
 }
 
+function BootScreen() {
+  return (
+    <div className="boot-screen" role="status" aria-label="Loading portfolio">
+      <div className="boot-console" aria-hidden="true">
+        <header><strong>portfolio-sh</strong><span>systemd[1]</span></header>
+        <div className="boot-log">
+          <p><b>[ OK ]</b> Mounted /dev/curiosity.</p>
+          <p><b>[ OK ]</b> Started security-and-systems.target.</p>
+          <p><b>[ OK ]</b> Reached target Portfolio Workspace.</p>
+        </div>
+        <div className="boot-meter"><i /><span>loading ~/public/home</span></div>
+      </div>
+      <span className="sr-only">Loading portfolio</span>
+    </div>
+  );
+}
+
 function Home({ onProjects }: { onProjects: () => void }) {
   return (
     <section className="home-view">
@@ -149,7 +171,7 @@ function Home({ onProjects }: { onProjects: () => void }) {
       <div className="hero-grid">
         <div>
           <p className="path-label">~/README.md</p>
-          <h1>I build systems,<br /><em>secure software,</em><br />and sometimes break Linux.</h1>
+          <h1>I build systems,<br /><em>secure software,</em><br />and break Linux.</h1>
           <p className="lede">Cyber Security student exploring DevSecOps, backend engineering, infrastructure, and human-centered technology through things I actually build.</p>
           <div className="hero-actions">
             <button className="primary-action" onClick={onProjects}>./explore-work</button>
