@@ -132,6 +132,10 @@ blockquote span { position: absolute; left: 0; top: 0; color: var(--orange); fon
 
 .about-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 2rem; margin-top: 1.25rem; }
 .about-copy { font-size: 1.05rem; }
+.about-contacts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; margin: 1.5rem 0 0; padding: .8rem 0 0; border-top: 1px solid var(--line); font-size: .78rem; }
+.about-contacts dt { color: var(--muted); font-size: .65rem; }
+.about-contacts dd { margin: .2rem 0 0; overflow-wrap: anywhere; }
+.about-contacts a { color: var(--aqua); text-decoration-thickness: 1px; text-underline-offset: .2em; }
 code { background: var(--panel-2); color: var(--yellow); padding: .1rem .25rem; }
 .facts { margin: 0; border-left: 1px solid var(--line); padding-left: 1.5rem; }
 .facts div { margin-bottom: .65rem; }
@@ -160,7 +164,7 @@ code { background: var(--panel-2); color: var(--yellow); padding: .1rem .25rem; 
 .inspector > :not(.pane-title) { margin-left: 1.2rem; margin-right: 1.2rem; }
 .inspect-index { margin-top: 1.7rem; color: var(--yellow); font-size: 4.5rem; font-weight: 900; line-height: 1; letter-spacing: -.08em; }
 .inspect-label { margin-top: 2rem; color: var(--muted); font-size: .65rem; letter-spacing: .12em; }
-.inspector h2 { margin: .5rem 1.2rem 1.5rem; font-size: 1.15rem; color: var(--yellow); overflow-wrap: anywhere; }
+.inspector h2 { margin: .5rem 0 1.5rem; font-size: 1.15rem; color: var(--yellow); overflow-wrap: anywhere; }
 .inspector dl { margin-top: 0; }
 .inspector dl div { padding: .8rem 0; border-top: 1px solid var(--line); }
 .inspector dt { color: var(--muted); font-size: .63rem; }
@@ -235,6 +239,7 @@ code { background: var(--panel-2); color: var(--yellow); padding: .1rem .25rem; 
   .section-header { display: block; }
   .section-header > p { margin-top: 1.2rem; }
   .project-layout, .about-grid { grid-template-columns: 1fr; }
+  .about-contacts { grid-template-columns: 1fr; gap: .55rem; }
   .project-state { position: static; text-align: left; }
   .timeline article { grid-template-columns: 2rem 1fr; }
   .timeline time { grid-column: 2; }
@@ -276,7 +281,7 @@ code { background: var(--panel-2); color: var(--yellow); padding: .1rem .25rem; 
 .log-tape span { padding: .7rem .45rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--aqua); font-size: .65rem; }
 .log-tape span:nth-child(2n) { border-right: 0; }
 .log-tape span:nth-last-child(-n+2) { border-bottom: 0; }
-.inspect-about pre { margin: 1.5rem 0; padding: .9rem; border: 1px solid var(--line); background: var(--bg); color: var(--aqua); font-size: .65rem; line-height: 1.8; overflow: hidden; animation: terminal-print .65s steps(4, end) both; }
+.about-portrait { display: block; width: 100%; aspect-ratio: 3 / 4; margin: 1.5rem 0; border: 1px solid var(--line); object-fit: cover; object-position: center; box-shadow: 5px 5px 0 var(--orange); }
 .relay-route { display: flex; align-items: center; justify-content: space-between; gap: .4rem; margin: 1.5rem 0; padding: .8rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--aqua); font-size: .72rem; }
 .relay-route b { color: var(--yellow); animation: relay-pulse .9s steps(2, end) infinite; }
 .document { animation: none; }
@@ -304,11 +309,11 @@ code { background: var(--panel-2); color: var(--yellow); padding: .1rem .25rem; 
 .boot-screen { animation: boot-eject .88s steps(8, end) both; }
 .boot-log p { animation-timing-function: steps(3, end); }
 .boot-meter i { animation-timing-function: steps(7, end); }
-.hero-actions button, .hero-actions a, .contact-action { transition: none; }
-.hero-actions button:hover, .hero-actions a:hover, .contact-action:hover { animation: key-press .16s steps(2, end) both; }
-.hero-actions button:active, .hero-actions a:active, .contact-action:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--line); }
-.inspect-link, .terminal button, .terminal-toggle { transition: none; }
-.inspect-link:hover, .terminal button:hover, .terminal-toggle:hover { animation: key-press .14s steps(2, end) both; }
+.tree nav button, .topbar-link, .hero-actions button, .hero-actions a, .contact-action, .inspect-link, .terminal button, .terminal-toggle { transition: none; }
+@media (hover: hover) {
+  .tree nav button:hover, .topbar-link:hover, .hero-actions button:hover, .hero-actions a:hover, .contact-action:hover, .inspect-link:hover, .terminal button:hover, .terminal-toggle:hover { animation: terminal-keydown .15s steps(2, end) both; }
+}
+.hero-actions button:active, .hero-actions a:active, .contact-action:active, .terminal-toggle:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--line); }
 @keyframes boot-eject {
   0%, 82% { clip-path: inset(0 0 0 0); }
   100% { clip-path: inset(100% 0 0 0); visibility: hidden; }
