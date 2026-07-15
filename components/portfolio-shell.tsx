@@ -140,8 +140,7 @@ function Inspector({ section, project }: { section: SectionId; project: typeof p
   if (section === "projects") return <div className="inspect-project"><div className="inspect-index">{project.index}</div><p className="inspect-label">SELECTED OBJECT</p><h2>{project.name}</h2><dl><div><dt>TYPE</dt><dd>{project.type}</dd></div><div><dt>STATE</dt><dd>{project.status}</dd></div><div><dt>TAGS</dt><dd>{project.stack.join(" / ")}</dd></div></dl>{"href" in project && <a className="inspect-link" href={project.href} target="_blank" rel="noreferrer">VIEW SOURCE →</a>}</div>;
   if (section === "home") return <div className="inspect-home"><p className="inspect-label">SYSTEM MANIFEST</p><h2>operator.profile</h2><div className="boot-checks"><span>[ OK ] systems</span><span>[ OK ] security</span><span>[ OK ] curiosity</span></div><dl><div><dt>BASE</dt><dd>Jakarta, ID</dd></div><div><dt>TRACK</dt><dd>Cyber Security</dd></div><div><dt>UPTIME</dt><dd>always learning</dd></div></dl></div>;
   if (section === "experience") return <div className="inspect-experience"><p className="inspect-label">ACTIVITY REGISTER</p><h2>2025 → now</h2><div className="log-tape"><span>R&amp;D</span><span>DevSecOps</span><span>Backend</span><span>Speaker</span></div><dl><div><dt>ENTRIES</dt><dd>{experience.length} logged roles</dd></div><div><dt>THREAD</dt><dd>build + organize</dd></div><div><dt>STATE</dt><dd>in progress</dd></div></dl></div>;
-  if (section === "about") return <div className="inspect-about"><p className="inspect-label">OPERATOR FINGERPRINT</p><h2>timsurreal</h2><pre aria-hidden="true">{`uid=1000(ts)\ngid=1000(builders)\ngroups=security,systems`}</pre><dl><div><dt>ENVIRONMENT</dt><dd>Linux + Windows</dd></div><div><dt>LANGUAGES</dt><dd>ID / EN / ZH</dd></div><div><dt>REBUILD COUNT</dt><dd>non-zero</dd></div></dl></div>;
-  return <div className="inspect-contact"><p className="inspect-label">COMMS RELAY</p><h2>channel open</h2><div className="relay-route"><span>JKT</span><b>──▶</b><span>GITHUB</span></div><dl><div><dt>PROTOCOL</dt><dd>human conversation</dd></div><div><dt>TIMEZONE</dt><dd>UTC+7</dd></div><div><dt>RESPONSE</dt><dd>not automated</dd></div></dl><a className="inspect-link" href="https://github.com/timsurrealedu" target="_blank" rel="noreferrer">OPEN CHANNEL →</a></div>;
+  if (section === "about") return <div className="inspect-about"><p className="inspect-label">OPERATOR FINGERPRINT</p><h2>timsurreal</h2><pre className="face-ascii" aria-label="Placeholder ASCII portrait">{`     .-''''-.\n   .'  _  _  '.\n  /   (o)(o)   \\\n |      /\\      |\n |    .____.    |\n  \\    '--'    /\n   '.        .'\n     '-.__.-'`}</pre><dl><div><dt>ENVIRONMENT</dt><dd>Linux + Windows</dd></div><div><dt>LANGUAGES</dt><dd>ID / EN / ZH</dd></div><div><dt>REBUILD COUNT</dt><dd>non-zero</dd></div></dl></div>;  return <div className="inspect-contact"><p className="inspect-label">COMMS RELAY</p><h2>channel open</h2><div className="relay-route"><span>JKT</span><b>──▶</b><span>GITHUB</span></div><dl><div><dt>PROTOCOL</dt><dd>human conversation</dd></div><div><dt>TIMEZONE</dt><dd>UTC+7</dd></div><div><dt>RESPONSE</dt><dd>not automated</dd></div></dl><a className="inspect-link" href="https://github.com/timsurrealedu" target="_blank" rel="noreferrer">OPEN CHANNEL →</a></div>;
 }
 function BootScreen() {
   return (
@@ -188,9 +187,9 @@ function Home({ onProjects }: { onProjects: () => void }) {
 └────────────────┘`}</pre>
       </div>
       <div className="proof-strip">
-        <div><strong>6</strong><span>selected projects</span></div>
+        <div><strong>7</strong><span>selected projects</span></div>
         <div><strong>8.0</strong><span>IELTS overall</span></div>
-        <div><strong>2029</strong><span>expected B.Sc.</span></div>
+        <div><strong>3.93</strong><span>current GPA</span></div>
         <div><strong>∞</strong><span>Linux reinstalls</span></div>
       </div>
       <blockquote><span>01</span> “I tend to learn by building something before I fully understand it, breaking it, reading the docs, and rebuilding it better.”</blockquote>
@@ -213,7 +212,7 @@ function Projects({ selected, onSelect }: { selected: number; onSelect: (index: 
         </div>
         <article className="project-detail" aria-live="polite">
           <div className="project-state"><span>STATE</span><b>{project.status}</b></div>
-          <p className="project-number">{project.index} / 06</p>
+          <p className="project-number">{project.index} / {String(projects.length).padStart(2, "0")}</p>
           <h2>{project.name}</h2>
           <p className="project-summary">{project.summary}</p>
           <div className="rule" />
@@ -244,7 +243,7 @@ function About() {
       <header className="section-header"><div><p className="path-label">~/about.md</p><h1>About the operator</h1></div><p>Cyber Security student at Bina Nusantara University, based in Jakarta.</p></header>
       <div className="about-grid">
         <div className="about-copy"><p>I’m Timothy Sebastian Darmawan, or <code>timsurreal</code> online. I like understanding systems by building them, breaking them, troubleshooting them, and making the next version less fragile.</p><p>My interests meet where software touches the real world: application security, backend systems, Linux, cloud infrastructure, networking, privacy, and teams that need someone to own the messy middle.</p></div>
-        <dl className="facts"><div><dt>EDUCATION</dt><dd>B.Sc. Cyber Security<br />BINUS · expected 2029</dd></div><div><dt>LANGUAGES</dt><dd>Indonesian · native<br />English · IELTS 8.0<br />Mandarin · basic</dd></div><div><dt>COMMUNITIES</dt><dd>Cyber Security Community<br />ISACA Student Group<br />GDG on Campus</dd></div></dl>
+        <dl className="facts"><div><dt>EDUCATION</dt><dd>B.Sc. Cyber Security<br />BINUS · expected 2029<br />GPA · 3.93</dd></div><div><dt>LANGUAGES</dt><dd>Indonesian · native<br />English · IELTS 8.0<br />Mandarin · basic</dd></div><div><dt>COMMUNITIES</dt><dd>BNCC<br />Persekutuan Oikumene (PO)<br />Cyber Security Community<br />ISACA Student Group<br />GDG on Campus</dd></div></dl>
       </div>
       <div className="skill-matrix">{skills.map(([name, value], index) => <div key={name}><span>0{index + 1}</span><h2>{name}</h2><p>{value}</p></div>)}</div>
       <p className="arch-note">$ uname -a<br /><strong>Arch · Fedora · CachyOS · NixOS · Windows 11</strong><br /><em>yes, I use Arch btw.</em></p>

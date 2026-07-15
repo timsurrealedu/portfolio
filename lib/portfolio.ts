@@ -54,13 +54,13 @@ export const projects = [
     slug: "mindvault",
     index: "05",
     name: "MindVault",
-    type: "human-centered technology",
-    status: "concept exploration",
-    summary: "A product exploration into private, trustworthy software for reflecting on mental well-being.",
-    detail: "Focused on translating a sensitive human problem into a usable product while considering trust, privacy, accessibility, and responsible technology. Presented honestly as exploration, not a shipped clinical tool.",
-    stack: ["Product thinking", "Privacy", "Accessibility"],
-  },
-  {
+    type: "UI/UX product prototype",
+    status: "high-fidelity prototype",
+    summary: "A UI/UX-focused mental-wellbeing product prototype designed around calm interaction, privacy cues, and responsive use.",
+    detail: "Designed themed dashboards, adaptive journaling, panic-mode interventions, quests, and teleconsultation consent flows. The AI, encryption, and blockchain behaviors are simulated for the prototype; it is not a medical device.",
+    stack: ["UX design", "React", "responsive UI", "design systems"],
+    href: "https://github.com/timsurrealedu/MindVault",
+  },  {
     slug: "smartwarga",
     index: "06",
     name: "SmartWarga",
@@ -70,12 +70,26 @@ export const projects = [
     detail: "Contributed to prototyping, application development, team responsibilities, GitHub workflows, and communicating the product’s purpose. Exact feature ownership awaits repository verification.",
     stack: ["Team development", "Prototyping", "Git"],
   },
-] as const;
+  {
+    slug: "pegilagi-studio",
+    index: "07",
+    name: "Pegilagi Studio",
+    type: "content automation pipeline",
+    status: "active build",
+    summary: "An approval-assisted studio for generating, scheduling, and rendering Indonesian short-form marketing content.",
+    detail: "Builds scripts, subtitles, storyboard previews, metadata, upload manifests, and analytics-driven variants; it can render queued 9:16 videos with reusable assets and ffmpeg.",
+    stack: ["Node.js", "automation", "ffmpeg", "content ops"],
+    href: "https://github.com/timsurrealedu/pegilagiMarketing",
+  },] as const;
 
 export const experience = [
   { year: "2025—now", role: "Research & Development Activist", org: "BNCC", note: "Backend foundations, APIs, authentication, databases, program planning, and technical proposals." },
   { year: "2025—now", role: "DevSecOps Initiative", org: "BNCC R&D", note: "Security and quality checks standardized through CI/CD workflows." },
   { year: "2025", role: "Backend Developer", org: "BNCC Technology Project", note: "Registration, login, dashboard support, Prisma integration, and cross-team debugging for a hackathon platform." },
   { year: "2025", role: "PIC — ADP Learning Program", org: "BNCC", note: "Led six organizers and owned three weeks of live sessions, attendance, follow-up, and continuity." },
+  { year: "2025", role: "Human Resource Development Activist", org: "BNCC", note: "Used surveys, SWOT analysis, proposals, and feedback to plan member-development programs." },
+  { year: "2025", role: "US Program — Best Proposal Team", org: "BNCC", note: "Co-developed an event plan selected as the program’s best proposal, then carried it into implementation planning." },
+  { year: "2025", role: "Media Partnership & External Outreach", org: "BNCC", note: "Researched partners, organized prospect lists, and prepared tailored professional outreach." },
+  { year: "2025", role: "Aktivis KK", org: "Persekutuan Oikumene", note: "Supported weekly small-group coordination, progress tracking, and follow-up across multiple groups." },
   { year: "2025", role: "AI Speaker", org: "SMA Wardaya", note: "Explained AI fundamentals, strategic value, and cultural risk to Grade 11 students." },
 ] as const;
