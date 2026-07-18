@@ -1,4 +1,7 @@
 export type SectionId = "home" | "projects" | "experience" | "about" | "contact";
+type MediaAsset = { src: string; alt: string; caption: string };
+type Project = { slug: string; index: string; name: string; type: string; status: string; summary: string; detail: string; stack: readonly string[]; href?: string; media?: MediaAsset };
+type Credential = { title: string; issuer: string; kind: string; year: string; media?: MediaAsset };
 
 export const sections: { id: SectionId; label: string; command: string; key: string }[] = [
   { id: "home", label: "overview", command: "whoami", key: "H" },
@@ -8,7 +11,7 @@ export const sections: { id: SectionId; label: string; command: string; key: str
   { id: "contact", label: "contact", command: "open contact", key: "C" },
 ];
 
-export const projects = [
+export const projects: readonly Project[] = [
   {
     slug: "sentinel",
     index: "01",
@@ -30,8 +33,18 @@ export const projects = [
     stack: ["Linux", "Oracle Cloud", "Tailscale", "Syncthing"],
   },
   {
-    slug: "stewie",
+    slug: "smartwarga",
     index: "03",
+    name: "SmartWarga",
+    type: "group product project",
+    status: "contribution documented",
+    summary: "A collaborative application project balancing product intent, technical feasibility, and presentation.",
+    detail: "Contributed to prototyping, application development, team responsibilities, GitHub workflows, and communicating the product’s purpose. Exact feature ownership awaits repository verification.",
+    stack: ["Team development", "Prototyping", "Git"],
+  },
+  {
+    slug: "stewie",
+    index: "04",
     name: "Stewie",
     type: "automated media pipeline",
     status: "active prototype",
@@ -39,16 +52,6 @@ export const projects = [
     detail: "Fetches topics, generates scripts through a multi-provider LLM fallback chain, synthesizes voices, measures per-line timing, composes 1080×1920 video with ffmpeg, generates metadata, and gates YouTube publishing behind manual approval. TikTok/Instagram publishing and scheduling remain planned.",
     stack: ["Python", "Kokoro/Piper", "ffmpeg", "LLM routing"],
     href: "https://github.com/timsurrealedu/stewie",
-  },
-  {
-    slug: "devsecops",
-    index: "04",
-    name: "Pipeline Standardization",
-    type: "BNCC R&D initiative",
-    status: "implemented workflow",
-    summary: "Repeatable CI/CD checks that bring quality and vulnerability feedback earlier into development.",
-    detail: "Explored and integrated GitHub Actions, SonarCloud, and Trivy into shared development workflows, emphasizing consistency and automated security validation.",
-    stack: ["GitHub Actions", "SonarCloud", "Trivy", "CI/CD"],
   },
   {
     slug: "mindvault",
@@ -60,36 +63,99 @@ export const projects = [
     detail: "Designed themed dashboards, adaptive journaling, panic-mode interventions, quests, and teleconsultation consent flows. The AI, encryption, and blockchain behaviors are simulated for the prototype; it is not a medical device.",
     stack: ["UX design", "React", "responsive UI", "design systems"],
     href: "https://github.com/timsurrealedu/MindVault",
-  },  {
-    slug: "smartwarga",
-    index: "06",
-    name: "SmartWarga",
-    type: "group product project",
-    status: "contribution documented",
-    summary: "A collaborative application project balancing product intent, technical feasibility, and presentation.",
-    detail: "Contributed to prototyping, application development, team responsibilities, GitHub workflows, and communicating the product’s purpose. Exact feature ownership awaits repository verification.",
-    stack: ["Team development", "Prototyping", "Git"],
   },
   {
-    slug: "pegilagi-studio",
-    index: "07",
-    name: "Pegilagi Studio",
-    type: "content automation pipeline",
-    status: "active build",
-    summary: "An approval-assisted studio for generating, scheduling, and rendering Indonesian short-form marketing content.",
-    detail: "Builds scripts, subtitles, storyboard previews, metadata, upload manifests, and analytics-driven variants; it can render queued 9:16 videos with reusable assets and ffmpeg.",
-    stack: ["Node.js", "automation", "ffmpeg", "content ops"],
-    href: "https://github.com/timsurrealedu/pegilagiMarketing",
-  },] as const;
+    slug: "automatic-trash-bin",
+    index: "06",
+    name: "Automatic Trash Bin",
+    type: "embedded systems prototype",
+    status: "functional prototype",
+    summary: "A sensor-driven bin that opens and closes automatically using an Arduino Uno.",
+    detail: "Programmed the microcontroller to coordinate sensors and motors, then designed and tested the initial circuit and enclosure concept in Tinkercad.",
+    stack: ["Arduino Uno", "Sensors", "Motors", "Tinkercad"],
+  },
+];
+
+export const organizations = [
+  {
+    name: "Bina Nusantara Computer Club",
+    short: "BNCC",
+    period: "Nov 2025—now",
+    relationship: "Activist",
+    description: "Student-led technology organization at BINUS University.",
+    summary: "Activist across the Research & Development and Human Resource Development subdivisions.",
+    roles: [],
+  },
+  {
+    name: "Persekutuan Oikumene",
+    short: "PO",
+    period: "Nov 2025—now",
+    relationship: "Activist · Small Group Leader",
+    description: "Christian student fellowship at BINUS University.",
+    summary: "Supported fellowship, worship, public speaking, and community development.",
+    roles: [["Small-group coordination", "Tracked weekly group progress, reminded leaders, and followed up on missing updates."]],
+  },
+  {
+    name: "Cyber Security Community",
+    short: "CSC",
+    period: "Nov 2025—now",
+    relationship: "Member",
+    description: "Cybersecurity learning community at BINUS University.",
+    summary: "Participates in a peer community centered on cybersecurity knowledge and practice.",
+    roles: [],
+  },
+  {
+    name: "ISACA Student Group",
+    short: "ISG",
+    period: "Nov 2025—now",
+    relationship: "Member",
+    description: "Student community connected to ISACA and cybersecurity practice.",
+    summary: "Cybersecurity community participation, including an ISACA workshop and certificate.",
+    roles: [],
+  },
+  {
+    name: "YCC SMAK 1",
+    short: "YCC",
+    period: "Jul 2024—Jan 2025",
+    relationship: "Member",
+    description: "Student fellowship organization at SMAK 1 BPK PENABUR Jakarta.",
+    summary: "Collaborated in planning and running weekly fellowship events for the student body.",
+    roles: [],
+  },
+  {
+    name: "Google Developer Groups on Campus",
+    short: "GDG",
+    period: "",
+    relationship: "Member",
+    description: "Campus developer community connected to Google Developer Groups.",
+    summary: "Participates in the campus technology and developer community.",
+    roles: [],
+  },
+];
 
 export const experience = [
-  { year: "2025—now", role: "Research & Development Activist", org: "BNCC", note: "Backend foundations, APIs, authentication, databases, program planning, and technical proposals." },
-  { year: "2025—now", role: "DevSecOps Initiative", org: "BNCC R&D", note: "Security and quality checks standardized through CI/CD workflows." },
-  { year: "2025", role: "Backend Developer", org: "BNCC Technology Project", note: "Registration, login, dashboard support, Prisma integration, and cross-team debugging for a hackathon platform." },
-  { year: "2025", role: "PIC — ADP Learning Program", org: "BNCC", note: "Led six organizers and owned three weeks of live sessions, attendance, follow-up, and continuity." },
-  { year: "2025", role: "Human Resource Development Activist", org: "BNCC", note: "Used surveys, SWOT analysis, proposals, and feedback to plan member-development programs." },
-  { year: "2025", role: "US Program — Best Proposal Team", org: "BNCC", note: "Co-developed an event plan selected as the program’s best proposal, then carried it into implementation planning." },
-  { year: "2025", role: "Media Partnership & External Outreach", org: "BNCC", note: "Researched partners, organized prospect lists, and prepared tailored professional outreach." },
-  { year: "2025", role: "Aktivis KK", org: "Persekutuan Oikumene", note: "Supported weekly small-group coordination, progress tracking, and follow-up across multiple groups." },
-  { year: "2025", role: "AI Speaker", org: "SMA Wardaya", note: "Explained AI fundamentals, strategic value, and cultural risk to Grade 11 students." },
+  { year: "Feb 2026", role: "Backend Developer · TPM Final Project", org: "BNCC", note: "Built registration, login, dashboard support, Prisma integration, and cross-team debugging for a hackathon platform." },
+  { year: "2025", role: "PIC · ADP Learning Program", org: "BNCC HRD", note: "Led six organizers and owned three weeks of live sessions, attendance, follow-up, and continuity." },
 ] as const;
+
+export const engagements = [
+  {
+    year: "2025",
+    role: "AI Speaker",
+    org: "SMA Wardaya",
+    note: "Explained AI fundamentals, strategic value, and cultural risk to Grade 11 students.",
+    image: "/timothy-speaking.png",
+    alt: "Timothy speaking into a microphone during a student event",
+  },
+  {
+    year: "2025",
+    role: "Annual Church Event Group Leader",
+    org: "SIL",
+    note: "Led and mentored a group of young teens while taking responsibility for their safety, participation, and engagement.",
+  },
+] as const;
+
+export const credentials: readonly Credential[] = [
+  { title: "ISACA Workshop Certificate", issuer: "ISACA Student Group", kind: "Workshop", year: "2025" },
+  { title: "BNCC TPM FinPro Certificate", issuer: "BNCC", kind: "Project", year: "2026" },
+];
