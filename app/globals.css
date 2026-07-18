@@ -116,7 +116,7 @@ blockquote span { position: absolute; left: 0; top: 0; color: var(--orange); fon
 .project-state b { color: var(--green); font-size: .72rem; }
 .project-summary { font-size: 1.05rem; }
 .project-media { margin: 1rem 0; border: 1px solid var(--line); }
-.project-media img { display: block; width: 100%; max-height: 24rem; object-fit: cover; }
+.project-media img { display: block; width: 100%; max-height: 24rem; object-fit: contain; background: oklch(0.16 0.008 75); }
 .project-media figcaption { padding: .55rem .75rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .68rem; }
 .rule { height: 1px; background: var(--line); margin: 1rem 0; }
 .tag-list { display: flex; flex-wrap: wrap; gap: .45rem; margin: 1rem 0; padding: 0; list-style: none; }
@@ -159,7 +159,7 @@ blockquote span { position: absolute; left: 0; top: 0; color: var(--orange); fon
 .event-proof figcaption > span { color: var(--muted); font-size: .75rem; }
 .credential-list { border-top: 1px solid var(--line); }
 .credential-list article { position: relative; padding: 1rem 5.5rem 1rem 0; border-bottom: 1px solid var(--line); }
-.credential-list img { width: 100%; max-height: 10rem; margin-bottom: .8rem; object-fit: cover; border: 1px solid var(--line); }
+.credential-list img { width: 100%; max-height: 10rem; margin-bottom: .8rem; object-fit: contain; background: oklch(0.96 0 0); border: 1px solid var(--line); }
 .credential-list article > span { position: absolute; right: 0; top: 1rem; border: 1px solid var(--line); padding: .2rem .45rem; color: var(--green); font-size: .62rem; }
 .experience-callout { margin: 1.5rem 0 0 auto; max-width: 54rem; display: grid; grid-template-columns: 10rem 1fr; padding: 1rem; border: 1px solid var(--line); background: var(--panel); box-shadow: inset 0 3px var(--orange); }
 .experience-callout span { color: var(--orange); font-size: .7rem; font-weight: 800; }
@@ -167,6 +167,9 @@ blockquote span { position: absolute; left: 0; top: 0; color: var(--orange); fon
 
 .about-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 2rem; margin-top: 1.25rem; }
 .about-copy { font-size: 1.05rem; }
+.about-inline-image { float: right; width: min(15rem, 42%); margin: .1rem 0 1rem 1rem; border: 1px solid var(--line); background: var(--panel); box-shadow: 5px 5px 0 color-mix(in oklch, var(--line) 55%, transparent); }
+.about-inline-image img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 48%; filter: saturate(.9) contrast(1.04); }
+.about-inline-image figcaption { padding: .45rem .6rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .62rem; }
 .about-contacts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; margin: 1.5rem 0 0; padding: .8rem 0 0; border-top: 1px solid var(--line); font-size: .78rem; }
 .about-contacts dt { color: var(--muted); font-size: .65rem; }
 .about-contacts dd { margin: .2rem 0 0; overflow-wrap: anywhere; }

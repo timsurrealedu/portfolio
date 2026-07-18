@@ -31,6 +31,11 @@ export const projects: readonly Project[] = [
     summary: "A private, multi-device environment connecting laptops, phones, tablets, and an Oracle Cloud server.",
     detail: "Provisioned and operate an A1 Flex Linux server; connected devices with Tailscale; built distributed file workflows with Syncthing; troubleshoot networking, sync, and cross-platform behavior.",
     stack: ["Linux", "Oracle Cloud", "Tailscale", "Syncthing"],
+    media: {
+      src: "/portfolio/lifeos-desktop.png",
+      alt: "LifeOS mobile screens showing inbox capture, scratchpad code, note tutor, and chat advisor views",
+      caption: "LifeOS mobile workspace: capture, code scratchpad, tutor, and vault advisor.",
+    },
   },
   {
     slug: "smartwarga",
@@ -83,6 +88,11 @@ export const projects: readonly Project[] = [
     summary: "A sensor-driven bin that opens and closes automatically using an Arduino Uno.",
     detail: "Programmed the microcontroller to coordinate sensors and motors, then designed and tested the initial circuit and enclosure concept in Tinkercad.",
     stack: ["Arduino Uno", "Sensors", "Motors", "Tinkercad"],
+    media: {
+      src: "/portfolio/automatic-trash-bin.png",
+      alt: "Tinkercad automatic trash bin enclosure beside a photo of the physical prototype",
+      caption: "Tinkercad enclosure concept and physical sensor-bin prototype.",
+    },
   },
 ];
 
@@ -158,18 +168,40 @@ export const engagements = [
     role: "AI Speaker",
     org: "SMA Wardaya",
     note: "Explained AI fundamentals, strategic value, and cultural risk to Grade 11 students.",
-    image: "/timothy-speaking.png",
-    alt: "Timothy speaking into a microphone during a student event",
+    image: "/portfolio/sma-wardaya-speaker.png",
+    alt: "Timothy presenting at SMA Wardaya in front of classroom slides",
   },
   {
     year: "2025",
     role: "Annual Church Event Group Leader",
     org: "SIL",
     note: "Led and mentored a group of young teens while taking responsibility for their safety, participation, and engagement.",
+    image: "/portfolio/sil-group.png",
+    alt: "Timothy standing with young teens and event organizers at the SIL 2025 annual church event",
   },
 ] as const;
 
 export const credentials: readonly Credential[] = [
-  { title: "ISACA Workshop Certificate", issuer: "ISACA Student Group", kind: "Workshop", year: "2025" },
-  { title: "BNCC TPM FinPro Certificate", issuer: "BNCC", kind: "Project", year: "2026" },
+  {
+    title: "ISACA Workshop Certificate",
+    issuer: "ISACA Student Group",
+    kind: "Workshop",
+    year: "2025",
+    media: {
+      src: "/portfolio/isg-workshop-certificate.png",
+      alt: "Certificate of participation for ARISE Bootcamp 2026 Mastering the Fundamental of IT Audit awarded to Timothy Sebastian Darmawan",
+      caption: "ARISE Bootcamp certificate from ISACA Student Group BINUS University.",
+    },
+  },
+  {
+    title: "BNCC TPM FinPro Certificate",
+    issuer: "BNCC",
+    kind: "Project",
+    year: "2026",
+    media: {
+      src: "/portfolio/bncc-tpm-certificate.png",
+      alt: "BNCC certificate of completion for Back-End Development Course awarded to Timothy Sebastian Darmawan",
+      caption: "BNCC Technology Project Member backend completion certificate.",
+    },
+  },
 ];
