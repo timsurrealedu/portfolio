@@ -83,14 +83,26 @@ export const projects: readonly Project[] = [
     detail: "Builds scripts, subtitles, storyboard previews, metadata, upload manifests, and analytics-driven variants; it can render queued 9:16 videos with reusable assets and ffmpeg.",
     stack: ["Node.js", "automation", "ffmpeg", "content ops"],
     href: "https://github.com/timsurrealedu/pegilagiMarketing",
-  },] as const;
+  },
+  {
+    slug: "automatic-trash-bin",
+    index: "08",
+    name: "Automatic Trash Bin",
+    type: "embedded systems prototype",
+    status: "functional prototype",
+    summary: "A sensor-driven bin that opens and closes automatically using an Arduino Uno.",
+    detail: "Programmed the microcontroller to coordinate sensors and motors, then designed and tested the initial circuit and enclosure concept in Tinkercad.",
+    stack: ["Arduino Uno", "Sensors", "Motors", "Tinkercad"],
+  },
+];
 
 export const organizations = [
   {
     name: "Bina Nusantara Computer Club",
     short: "BNCC",
-    period: "2025—now",
+    period: "Nov 2025—now",
     relationship: "Activist",
+    description: "Student-led technology organization at BINUS University.",
     summary: "Technical learning and organizational development, with responsibility across two subdivisions.",
     roles: [
       ["Research & Development", "Backend practice, technical program planning, proposals, and DevSecOps workflows."],
@@ -100,24 +112,53 @@ export const organizations = [
   {
     name: "Persekutuan Oikumene",
     short: "PO",
-    period: "2025—now",
-    relationship: "Aktivis KK",
-    summary: "Weekly small-group coordination, progress tracking, reminders, and follow-up with group leaders.",
+    period: "Nov 2025—now",
+    relationship: "Activist · Small Group Leader",
+    description: "Christian student fellowship at BINUS University.",
+    summary: "Supported fellowship, worship, public speaking, and community development.",
+    roles: [["Small-group coordination", "Tracked weekly group progress, reminded leaders, and followed up on missing updates."]],
+  },
+  {
+    name: "Cyber Security Community",
+    short: "CSC",
+    period: "Nov 2025—now",
+    relationship: "Member",
+    description: "Cybersecurity learning community at BINUS University.",
+    summary: "Participates in a peer community centered on cybersecurity knowledge and practice.",
     roles: [],
   },
   {
     name: "ISACA Student Group",
-    short: "ISACA",
-    period: "2025—now",
+    short: "ISG",
+    period: "Nov 2025—now",
     relationship: "Member",
+    description: "Student community connected to ISACA and cybersecurity practice.",
     summary: "Cybersecurity community participation, including an ISACA workshop and certificate.",
+    roles: [],
+  },
+  {
+    name: "YCC SMAK 1",
+    short: "YCC",
+    period: "Jul 2024—Jan 2025",
+    relationship: "Member",
+    description: "Student fellowship organization at SMAK 1 BPK PENABUR Jakarta.",
+    summary: "Collaborated in planning and running weekly fellowship events for the student body.",
+    roles: [],
+  },
+  {
+    name: "Google Developer Groups on Campus",
+    short: "GDG",
+    period: "",
+    relationship: "Member",
+    description: "Campus developer community connected to Google Developer Groups.",
+    summary: "Participates in the campus technology and developer community.",
     roles: [],
   },
 ];
 
 export const experience = [
   { year: "2025", role: "DevSecOps Pipeline Standardization", org: "BNCC R&D", note: "Integrated GitHub Actions, SonarCloud, and Trivy into repeatable quality and security checks." },
-  { year: "2025", role: "Backend Developer · TPM Final Project", org: "BNCC", note: "Built registration, login, dashboard support, Prisma integration, and cross-team debugging for a hackathon platform." },
+  { year: "Feb 2026", role: "Backend Developer · TPM Final Project", org: "BNCC", note: "Built registration, login, dashboard support, Prisma integration, and cross-team debugging for a hackathon platform." },
   { year: "2025", role: "PIC · ADP Learning Program", org: "BNCC HRD", note: "Led six organizers and owned three weeks of live sessions, attendance, follow-up, and continuity." },
   { year: "2025", role: "US Program · Best Proposal Team", org: "BNCC", note: "Co-developed the program’s selected event plan and carried it into implementation planning." },
 ] as const;
@@ -131,9 +172,15 @@ export const engagements = [
     image: "/timothy-speaking.png",
     alt: "Timothy speaking into a microphone during a student event",
   },
+  {
+    year: "2025",
+    role: "Annual Church Event Group Leader",
+    org: "SIL",
+    note: "Led and mentored a group of young teens while taking responsibility for their safety, participation, and engagement.",
+  },
 ] as const;
 
 export const credentials: readonly Credential[] = [
   { title: "ISACA Workshop Certificate", issuer: "ISACA Student Group", kind: "Workshop", year: "2025" },
-  { title: "BNCC TPM FinPro Certificate", issuer: "BNCC", kind: "Project", year: "2025" },
+  { title: "BNCC TPM FinPro Certificate", issuer: "BNCC", kind: "Project", year: "2026" },
 ];

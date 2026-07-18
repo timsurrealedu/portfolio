@@ -139,7 +139,7 @@ export function PortfolioShell() {
 function Inspector({ section, project }: { section: SectionId; project: typeof projects[number] }) {
   if (section === "projects") return <div className="inspect-project"><div className="inspect-index">{project.index}</div><p className="inspect-label">SELECTED OBJECT</p><h2>{project.name}</h2><dl><div><dt>TYPE</dt><dd>{project.type}</dd></div><div><dt>STATE</dt><dd>{project.status}</dd></div><div><dt>TAGS</dt><dd>{project.stack.join(" / ")}</dd></div></dl>{project.href && <a className="inspect-link" href={project.href} target="_blank" rel="noreferrer">VIEW SOURCE →</a>}</div>;
   if (section === "home") return <div className="inspect-home"><p className="inspect-label">SYSTEM MANIFEST</p><h2>operator.profile</h2><div className="boot-checks"><span>[ OK ] systems</span><span>[ OK ] security</span><span>[ OK ] curiosity</span></div><dl><div><dt>BASE</dt><dd>Jakarta, ID</dd></div><div><dt>TRACK</dt><dd>Cyber Security</dd></div><div><dt>UPTIME</dt><dd>always learning</dd></div></dl></div>;
-  if (section === "experience") return <div className="inspect-experience"><p className="inspect-label">EXPERIENCE INDEX</p><h2>2025 → now</h2><div className="log-tape"><span>ORGS {organizations.length}</span><span>WORK {experience.length}</span><span>EVENTS {engagements.length}</span><span>PROOF {credentials.length}</span></div><dl><div><dt>STRUCTURE</dt><dd>affiliation → role → evidence</dd></div><div><dt>THREAD</dt><dd>build + organize + explain</dd></div><div><dt>STATE</dt><dd>in progress</dd></div></dl></div>;
+  if (section === "experience") return <div className="inspect-experience"><p className="inspect-label">EXPERIENCE INDEX</p><h2>2024 → now</h2><div className="log-tape"><span>ORGS {organizations.length}</span><span>WORK {experience.length}</span><span>EVENTS {engagements.length}</span><span>PROOF {credentials.length}</span></div><dl><div><dt>STRUCTURE</dt><dd>affiliation → role → evidence</dd></div><div><dt>THREAD</dt><dd>build + organize + explain</dd></div><div><dt>STATE</dt><dd>in progress</dd></div></dl></div>;
   if (section === "about") return <div className="inspect-about"><p className="inspect-label">OPERATOR FINGERPRINT</p><h2>timsurreal</h2><img className="about-portrait" src="/timothy-speaking.png" alt="Timothy speaking into a microphone" /><dl><div><dt>ENVIRONMENT</dt><dd>Linux + Windows</dd></div><div><dt>LANGUAGES</dt><dd>ID / EN / ZH</dd></div><div><dt>REBUILD COUNT</dt><dd>non-zero</dd></div></dl></div>;  return <div className="inspect-contact"><p className="inspect-label">COMMS RELAY</p><h2>channel open</h2><div className="relay-route"><span>JKT</span><b>──▶</b><span>GITHUB</span></div><dl><div><dt>PROTOCOL</dt><dd>human conversation</dd></div><div><dt>TIMEZONE</dt><dd>UTC+7</dd></div><div><dt>RESPONSE</dt><dd>not automated</dd></div></dl><a className="inspect-link" href="https://github.com/timsurrealedu" target="_blank" rel="noreferrer">OPEN CHANNEL →</a></div>;
 }
 function BootScreen() {
@@ -187,7 +187,7 @@ function Home({ onProjects }: { onProjects: () => void }) {
 └────────────────┘`}</pre>
       </div>
       <div className="proof-strip">
-        <div><strong>7</strong><span>selected projects</span></div>
+        <div><strong>{projects.length}</strong><span>selected projects</span></div>
         <div><strong>8.0</strong><span>IELTS overall</span></div>
         <div><strong>3.93</strong><span>current GPA</span></div>
         <div><strong>∞</strong><span>Linux reinstalls</span></div>
@@ -235,8 +235,8 @@ function Experience() {
         <h2><span>01</span> Organizations &amp; communities</h2>
         <div className="organization-list">
           {organizations.map((item) => <article key={item.short}>
-            <header><b>{item.short}</b><time>{item.period}</time></header>
-            <div><p>{item.relationship}</p><h3>{item.name}</h3><span>{item.summary}</span></div>
+            <header><b>{item.short}</b>{item.period && <time>{item.period}</time>}</header>
+            <div className={item.roles.length ? "" : "org-summary"}><p>{item.relationship}</p><h3>{item.name}</h3><small>{item.description}</small><span>{item.summary}</span></div>
             {item.roles.length > 0 && <dl>{item.roles.map(([role, note]) => <div key={role}><dt>{role}</dt><dd>{note}</dd></div>)}</dl>}
           </article>)}
         </div>
@@ -252,10 +252,10 @@ function Experience() {
       <div className="evidence-layout">
         <section className="experience-group">
           <h2><span>03</span> Speaking &amp; events</h2>
-          {engagements.map((item) => <figure className="event-proof" key={item.role}>
-            <img src={item.image} alt={item.alt} />
+          <div className="event-stack">{engagements.map((item) => <figure className={`event-proof ${"image" in item ? "" : "no-media"}`} key={item.role}>
+            {"image" in item && <img src={item.image} alt={item.alt} />}
             <figcaption><p>{item.org} · {item.year}</p><h3>{item.role}</h3><span>{item.note}</span></figcaption>
-          </figure>)}
+          </figure>)}</div>
         </section>
         <section className="experience-group">
           <h2><span>04</span> Certificates</h2>
@@ -275,7 +275,7 @@ function About() {
       <header className="section-header"><div><p className="path-label">~/about.md</p><h1>About the operator</h1></div><p>Cyber Security student at Bina Nusantara University, based in Jakarta.</p></header>
       <div className="about-grid">
         <div className="about-copy"><p>I’m Timothy Sebastian Darmawan, or <code>timsurreal</code> online. I like understanding systems by building them, breaking them, troubleshooting them, and making the next version less fragile.</p><p>My interests meet where software touches the real world: application security, backend systems, Linux, cloud infrastructure, networking, privacy, and teams that need someone to own the messy middle.</p><dl className="about-contacts"><div><dt>EMAIL</dt><dd><a href="mailto:td522637@gmail.com">td522637@gmail.com</a></dd></div><div><dt>WHATSAPP</dt><dd><a href="https://wa.me/6287777179775" target="_blank" rel="noreferrer">+62 87777179775 ↗</a></dd></div><div><dt>DISCORD</dt><dd>@timsurreal</dd></div></dl></div>
-        <dl className="facts"><div><dt>EDUCATION</dt><dd>B.Sc. Cyber Security<br />BINUS · expected 2029<br />GPA · 3.93</dd></div><div><dt>LANGUAGES</dt><dd>Indonesian · native<br />English · IELTS 8.0<br />Mandarin · basic</dd></div><div><dt>COMMUNITIES</dt><dd>Bina Nusantara Computer Club (BNCC)<br />Persekutuan Oikumene (PO)<br />Cyber Security Community<br />ISACA Student Group<br />Google Developer Groups (GDG) on Campus</dd></div></dl>
+        <dl className="facts"><div><dt>EDUCATION</dt><dd>B.Sc. Cyber Security<br />BINUS · expected 2029<br />GPA · 3.93</dd></div><div><dt>LANGUAGES</dt><dd>Indonesian · native<br />English · IELTS 8.0<br />Mandarin · basic</dd></div><div><dt>COMMUNITIES</dt><dd>BNCC · PO · CSC · ISG<br />YCC SMAK 1 · GDG on Campus</dd></div></dl>
       </div>
       <div className="skill-matrix">{skills.map(([name, value], index) => <div key={name}><span>0{index + 1}</span><h2>{name}</h2><p>{value}</p></div>)}</div>
       <p className="arch-note">$ uname -a<br /><strong>Arch · Fedora · CachyOS · NixOS · Windows 11</strong><br /><em>yes, I use Arch btw.</em></p>
