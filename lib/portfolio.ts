@@ -83,8 +83,11 @@ export const organizations = [
     period: "Nov 2025—now",
     relationship: "Activist",
     description: "Student-led technology organization at BINUS University.",
-    summary: "Activist across the Research & Development and Human Resource Development subdivisions.",
-    roles: [],
+    summary: "Technical learning and organizational development across two subdivisions.",
+    roles: [
+      ["Research & Development", "Backend practice, technical program planning, proposals, and DevSecOps workflows."],
+      ["Human Resource Development", "Member-development research, surveys, SWOT analysis, and program delivery."],
+    ],
   },
   {
     name: "Persekutuan Oikumene",
