@@ -167,9 +167,6 @@ blockquote span { position: absolute; left: 0; top: 0; color: var(--orange); fon
 
 .about-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 2rem; margin-top: 1.25rem; }
 .about-copy { font-size: 1.05rem; }
-.about-inline-image { float: right; width: min(15rem, 42%); margin: .1rem 0 1rem 1rem; border: 1px solid var(--line); background: var(--panel); box-shadow: 5px 5px 0 color-mix(in oklch, var(--line) 55%, transparent); }
-.about-inline-image img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 48%; filter: saturate(.9) contrast(1.04); }
-.about-inline-image figcaption { padding: .45rem .6rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .62rem; }
 .about-contacts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; margin: 1.5rem 0 0; padding: .8rem 0 0; border-top: 1px solid var(--line); font-size: .78rem; }
 .about-contacts dt { color: var(--muted); font-size: .65rem; }
 .about-contacts dd { margin: .2rem 0 0; overflow-wrap: anywhere; }
