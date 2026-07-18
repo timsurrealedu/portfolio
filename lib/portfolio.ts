@@ -54,8 +54,18 @@ export const projects: readonly Project[] = [
     href: "https://github.com/timsurrealedu/stewie",
   },
   {
-    slug: "mindvault",
+    slug: "devsecops-proposal",
     index: "05",
+    name: "DevSecOps Pipeline Standardization",
+    type: "BNCC R&D program proposal",
+    status: "proposed · not implemented",
+    summary: "A proposed BNCC program kerja for standardizing automated code-quality and vulnerability checks; it never proceeded to implementation.",
+    detail: "Planned a workflow around GitHub Actions, SonarCloud, and Trivy to move feedback earlier in development. This remained a proposal and planning artifact—no production pipeline was built or deployed.",
+    stack: ["Program proposal", "GitHub Actions", "SonarCloud", "Trivy"],
+  },
+  {
+    slug: "mindvault",
+    index: "06",
     name: "MindVault",
     type: "UI/UX product prototype",
     status: "high-fidelity prototype",
@@ -66,7 +76,7 @@ export const projects: readonly Project[] = [
   },
   {
     slug: "automatic-trash-bin",
-    index: "06",
+    index: "07",
     name: "Automatic Trash Bin",
     type: "embedded systems prototype",
     status: "functional prototype",
