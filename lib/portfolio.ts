@@ -204,4 +204,15 @@ export const credentials: readonly Credential[] = [
       caption: "BNCC Technology Project Member backend completion certificate.",
     },
   },
+  {
+    title: "IT FAIR UI/UX Design Competition Participation",
+    issuer: "HIMATIF UIN Sunan Gunung Djati Bandung",
+    kind: "Competition",
+    year: "2026",
+    media: {
+      src: "/portfolio/uiux-competition-certificate.png",
+      alt: "Certificate of participation for the IT FAIR XIV UI/UX Design Competition presented to Timothy Sebastian",
+      caption: "Participation certificate for the IT FAIR XIV UI/UX Design Competition.",
+    },
+  },
 ];
