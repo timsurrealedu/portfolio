@@ -26,7 +26,7 @@ Security, systems, building, and leadership—demonstrated through work rather t
 - Secondary CTA: visit GitHub and make contact.
 - The line a visitor remembers after 10 seconds: “I build systems, secure software, and occasionally break my Linux installation.”
 - Belief ladder: Timothy is curious → he ships and operates real systems → he understands security and infrastructure tradeoffs → he can own work and communicate it.
-- Proof on hand: Sentinel, LifeOS, Stewie, DevSecOps pipeline work, BNCC technical and leadership responsibilities, public speaking, and IELTS 8.0.
+- Proof on hand: Sentinel, LifeOS, Stewie, TPM backend work, ADP program leadership, public speaking, and IELTS 8.0.
 
 ## Brand Personality
 

@@ -33,8 +33,18 @@ export const projects: readonly Project[] = [
     stack: ["Linux", "Oracle Cloud", "Tailscale", "Syncthing"],
   },
   {
-    slug: "stewie",
+    slug: "smartwarga",
     index: "03",
+    name: "SmartWarga",
+    type: "group product project",
+    status: "contribution documented",
+    summary: "A collaborative application project balancing product intent, technical feasibility, and presentation.",
+    detail: "Contributed to prototyping, application development, team responsibilities, GitHub workflows, and communicating the product’s purpose. Exact feature ownership awaits repository verification.",
+    stack: ["Team development", "Prototyping", "Git"],
+  },
+  {
+    slug: "stewie",
+    index: "04",
     name: "Stewie",
     type: "automated media pipeline",
     status: "active prototype",
@@ -42,16 +52,6 @@ export const projects: readonly Project[] = [
     detail: "Fetches topics, generates scripts through a multi-provider LLM fallback chain, synthesizes voices, measures per-line timing, composes 1080×1920 video with ffmpeg, generates metadata, and gates YouTube publishing behind manual approval. TikTok/Instagram publishing and scheduling remain planned.",
     stack: ["Python", "Kokoro/Piper", "ffmpeg", "LLM routing"],
     href: "https://github.com/timsurrealedu/stewie",
-  },
-  {
-    slug: "devsecops",
-    index: "04",
-    name: "Pipeline Standardization",
-    type: "BNCC R&D initiative",
-    status: "implemented workflow",
-    summary: "Repeatable CI/CD checks that bring quality and vulnerability feedback earlier into development.",
-    detail: "Explored and integrated GitHub Actions, SonarCloud, and Trivy into shared development workflows, emphasizing consistency and automated security validation.",
-    stack: ["GitHub Actions", "SonarCloud", "Trivy", "CI/CD"],
   },
   {
     slug: "mindvault",
@@ -63,30 +63,10 @@ export const projects: readonly Project[] = [
     detail: "Designed themed dashboards, adaptive journaling, panic-mode interventions, quests, and teleconsultation consent flows. The AI, encryption, and blockchain behaviors are simulated for the prototype; it is not a medical device.",
     stack: ["UX design", "React", "responsive UI", "design systems"],
     href: "https://github.com/timsurrealedu/MindVault",
-  },  {
-    slug: "smartwarga",
-    index: "06",
-    name: "SmartWarga",
-    type: "group product project",
-    status: "contribution documented",
-    summary: "A collaborative application project balancing product intent, technical feasibility, and presentation.",
-    detail: "Contributed to prototyping, application development, team responsibilities, GitHub workflows, and communicating the product’s purpose. Exact feature ownership awaits repository verification.",
-    stack: ["Team development", "Prototyping", "Git"],
-  },
-  {
-    slug: "pegilagi-studio",
-    index: "07",
-    name: "Pegilagi Studio",
-    type: "content automation pipeline",
-    status: "active build",
-    summary: "An approval-assisted studio for generating, scheduling, and rendering Indonesian short-form marketing content.",
-    detail: "Builds scripts, subtitles, storyboard previews, metadata, upload manifests, and analytics-driven variants; it can render queued 9:16 videos with reusable assets and ffmpeg.",
-    stack: ["Node.js", "automation", "ffmpeg", "content ops"],
-    href: "https://github.com/timsurrealedu/pegilagiMarketing",
   },
   {
     slug: "automatic-trash-bin",
-    index: "08",
+    index: "06",
     name: "Automatic Trash Bin",
     type: "embedded systems prototype",
     status: "functional prototype",
@@ -103,11 +83,8 @@ export const organizations = [
     period: "Nov 2025—now",
     relationship: "Activist",
     description: "Student-led technology organization at BINUS University.",
-    summary: "Technical learning and organizational development, with responsibility across two subdivisions.",
-    roles: [
-      ["Research & Development", "Backend practice, technical program planning, proposals, and DevSecOps workflows."],
-      ["Human Resource Development", "Member-development research, surveys, SWOT analysis, and program delivery."],
-    ],
+    summary: "Activist across the Research & Development and Human Resource Development subdivisions.",
+    roles: [],
   },
   {
     name: "Persekutuan Oikumene",
@@ -157,10 +134,8 @@ export const organizations = [
 ];
 
 export const experience = [
-  { year: "2025", role: "DevSecOps Pipeline Standardization", org: "BNCC R&D", note: "Integrated GitHub Actions, SonarCloud, and Trivy into repeatable quality and security checks." },
   { year: "Feb 2026", role: "Backend Developer · TPM Final Project", org: "BNCC", note: "Built registration, login, dashboard support, Prisma integration, and cross-team debugging for a hackathon platform." },
   { year: "2025", role: "PIC · ADP Learning Program", org: "BNCC HRD", note: "Led six organizers and owned three weeks of live sessions, attendance, follow-up, and continuity." },
-  { year: "2025", role: "US Program · Best Proposal Team", org: "BNCC", note: "Co-developed the program’s selected event plan and carried it into implementation planning." },
 ] as const;
 
 export const engagements = [
