@@ -1,4 +1,7 @@
 export type SectionId = "home" | "projects" | "experience" | "about" | "contact";
+type MediaAsset = { src: string; alt: string; caption: string };
+type Project = { slug: string; index: string; name: string; type: string; status: string; summary: string; detail: string; stack: readonly string[]; href?: string; media?: MediaAsset };
+type Credential = { title: string; issuer: string; kind: string; year: string; media?: MediaAsset };
 
 export const sections: { id: SectionId; label: string; command: string; key: string }[] = [
   { id: "home", label: "overview", command: "whoami", key: "H" },
@@ -8,7 +11,7 @@ export const sections: { id: SectionId; label: string; command: string; key: str
   { id: "contact", label: "contact", command: "open contact", key: "C" },
 ];
 
-export const projects = [
+export const projects: readonly Project[] = [
   {
     slug: "sentinel",
     index: "01",
@@ -54,13 +57,13 @@ export const projects = [
     slug: "mindvault",
     index: "05",
     name: "MindVault",
-    type: "human-centered technology",
-    status: "concept exploration",
-    summary: "A product exploration into private, trustworthy software for reflecting on mental well-being.",
-    detail: "Focused on translating a sensitive human problem into a usable product while considering trust, privacy, accessibility, and responsible technology. Presented honestly as exploration, not a shipped clinical tool.",
-    stack: ["Product thinking", "Privacy", "Accessibility"],
-  },
-  {
+    type: "UI/UX product prototype",
+    status: "high-fidelity prototype",
+    summary: "A UI/UX-focused mental-wellbeing product prototype designed around calm interaction, privacy cues, and responsive use.",
+    detail: "Designed themed dashboards, adaptive journaling, panic-mode interventions, quests, and teleconsultation consent flows. The AI, encryption, and blockchain behaviors are simulated for the prototype; it is not a medical device.",
+    stack: ["UX design", "React", "responsive UI", "design systems"],
+    href: "https://github.com/timsurrealedu/MindVault",
+  },  {
     slug: "smartwarga",
     index: "06",
     name: "SmartWarga",
@@ -70,12 +73,67 @@ export const projects = [
     detail: "Contributed to prototyping, application development, team responsibilities, GitHub workflows, and communicating the product’s purpose. Exact feature ownership awaits repository verification.",
     stack: ["Team development", "Prototyping", "Git"],
   },
-] as const;
+  {
+    slug: "pegilagi-studio",
+    index: "07",
+    name: "Pegilagi Studio",
+    type: "content automation pipeline",
+    status: "active build",
+    summary: "An approval-assisted studio for generating, scheduling, and rendering Indonesian short-form marketing content.",
+    detail: "Builds scripts, subtitles, storyboard previews, metadata, upload manifests, and analytics-driven variants; it can render queued 9:16 videos with reusable assets and ffmpeg.",
+    stack: ["Node.js", "automation", "ffmpeg", "content ops"],
+    href: "https://github.com/timsurrealedu/pegilagiMarketing",
+  },] as const;
+
+export const organizations = [
+  {
+    name: "Bina Nusantara Computer Club",
+    short: "BNCC",
+    period: "2025—now",
+    relationship: "Activist",
+    summary: "Technical learning and organizational development, with responsibility across two subdivisions.",
+    roles: [
+      ["Research & Development", "Backend practice, technical program planning, proposals, and DevSecOps workflows."],
+      ["Human Resource Development", "Member-development research, surveys, SWOT analysis, and program delivery."],
+    ],
+  },
+  {
+    name: "Persekutuan Oikumene",
+    short: "PO",
+    period: "2025—now",
+    relationship: "Aktivis KK",
+    summary: "Weekly small-group coordination, progress tracking, reminders, and follow-up with group leaders.",
+    roles: [],
+  },
+  {
+    name: "ISACA Student Group",
+    short: "ISACA",
+    period: "2025—now",
+    relationship: "Member",
+    summary: "Cybersecurity community participation, including an ISACA workshop and certificate.",
+    roles: [],
+  },
+];
 
 export const experience = [
-  { year: "2025—now", role: "Research & Development Activist", org: "BNCC", note: "Backend foundations, APIs, authentication, databases, program planning, and technical proposals." },
-  { year: "2025—now", role: "DevSecOps Initiative", org: "BNCC R&D", note: "Security and quality checks standardized through CI/CD workflows." },
-  { year: "2025", role: "Backend Developer", org: "BNCC Technology Project", note: "Registration, login, dashboard support, Prisma integration, and cross-team debugging for a hackathon platform." },
-  { year: "2025", role: "PIC — ADP Learning Program", org: "BNCC", note: "Led six organizers and owned three weeks of live sessions, attendance, follow-up, and continuity." },
-  { year: "2025", role: "AI Speaker", org: "SMA Wardaya", note: "Explained AI fundamentals, strategic value, and cultural risk to Grade 11 students." },
+  { year: "2025", role: "DevSecOps Pipeline Standardization", org: "BNCC R&D", note: "Integrated GitHub Actions, SonarCloud, and Trivy into repeatable quality and security checks." },
+  { year: "2025", role: "Backend Developer · TPM Final Project", org: "BNCC", note: "Built registration, login, dashboard support, Prisma integration, and cross-team debugging for a hackathon platform." },
+  { year: "2025", role: "PIC · ADP Learning Program", org: "BNCC HRD", note: "Led six organizers and owned three weeks of live sessions, attendance, follow-up, and continuity." },
+  { year: "2025", role: "US Program · Best Proposal Team", org: "BNCC", note: "Co-developed the program’s selected event plan and carried it into implementation planning." },
 ] as const;
+
+export const engagements = [
+  {
+    year: "2025",
+    role: "AI Speaker",
+    org: "SMA Wardaya",
+    note: "Explained AI fundamentals, strategic value, and cultural risk to Grade 11 students.",
+    image: "/timothy-speaking.png",
+    alt: "Timothy speaking into a microphone during a student event",
+  },
+] as const;
+
+export const credentials: readonly Credential[] = [
+  { title: "ISACA Workshop Certificate", issuer: "ISACA Student Group", kind: "Workshop", year: "2025" },
+  { title: "BNCC TPM FinPro Certificate", issuer: "BNCC", kind: "Project", year: "2025" },
+];
