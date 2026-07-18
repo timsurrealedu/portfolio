@@ -157,6 +157,7 @@ export const organizations = [
 ];
 
 export const experience = [
+  { year: "2026", role: "Media Partner Team · BNCC CSR 2026", org: "BNCC", note: "Supported external communications for the CSR event by coordinating media-partner visibility, promotional touchpoints, and event-facing publication flow." },
   { year: "Feb 2026", role: "Backend Developer · TPM Final Project", org: "BNCC", note: "Built registration, login, dashboard support, Prisma integration, and cross-team debugging for a hackathon platform." },
   { year: "2025", role: "PIC · ADP Learning Program", org: "BNCC HRD", note: "Led six organizers and owned three weeks of live sessions, attendance, follow-up, and continuity." },
   { year: "2025", role: "DevSecOps Pipeline Standardization · Proposal", org: "BNCC R&D", note: "Proposed a program kerja using GitHub Actions, SonarCloud, and Trivy; it was never implemented or deployed." },
