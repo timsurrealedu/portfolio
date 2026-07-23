@@ -13,8 +13,19 @@ export const sections: { id: SectionId; label: string; command: string; key: str
 
 export const projects: readonly Project[] = [
   {
-    slug: "sentinel",
+    slug: "nolen",
     index: "01",
+    name: "Nolen",
+    type: "security telemetry & incident detection",
+    status: "team MVP verified",
+    summary: "An open-source Linux security telemetry platform that turns authenticated events into explainable detections and correlated incidents.",
+    detail: "Served as Cybersecurity & Detection Lead: authored the threat model and telemetry security requirements; designed detection-as-code rules, MITRE ATT&CK mappings, false-positive boundaries, and deterministic SSH-compromise correlation; built safe attack simulations and reviewed authentication, authorization, rate limiting, redaction, secrets, and service isolation. Verification passed 52 automated tests and six offline scenarios; the complete scenario produces one confidence-80 incident from 12 unique evidence events.",
+    stack: ["Threat modeling", "Detection engineering", "MITRE ATT&CK", "Node.js", "NATS JetStream"],
+    href: "https://github.com/timsurrealedu/nolen",
+  },
+  {
+    slug: "sentinel",
+    index: "02",
     name: "Sentinel",
     type: "security tooling",
     status: "in development",
@@ -24,7 +35,7 @@ export const projects: readonly Project[] = [
   },
   {
     slug: "lifeos",
-    index: "02",
+    index: "03",
     name: "LifeOS",
     type: "personal infrastructure",
     status: "operational",
@@ -39,7 +50,7 @@ export const projects: readonly Project[] = [
   },
   {
     slug: "smartwarga",
-    index: "03",
+    index: "04",
     name: "SmartWarga",
     type: "group product project",
     status: "contribution documented",
@@ -49,7 +60,7 @@ export const projects: readonly Project[] = [
   },
   {
     slug: "stewie",
-    index: "04",
+    index: "05",
     name: "Stewie",
     type: "automated media pipeline",
     status: "active prototype",
@@ -60,7 +71,7 @@ export const projects: readonly Project[] = [
   },
   {
     slug: "devsecops-proposal",
-    index: "05",
+    index: "06",
     name: "DevSecOps Pipeline Standardization",
     type: "BNCC R&D program proposal",
     status: "proposed · not implemented",
@@ -70,7 +81,7 @@ export const projects: readonly Project[] = [
   },
   {
     slug: "mindvault",
-    index: "06",
+    index: "07",
     name: "MindVault",
     type: "UI/UX product prototype",
     status: "high-fidelity prototype",
@@ -81,7 +92,7 @@ export const projects: readonly Project[] = [
   },
   {
     slug: "automatic-trash-bin",
-    index: "07",
+    index: "08",
     name: "Automatic Trash Bin",
     type: "embedded systems prototype",
     status: "functional prototype",
