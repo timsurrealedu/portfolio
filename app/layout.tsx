@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Timothy Sebastian Darmawan — Security, Systems, Building",
-  description: "Cyber Security student building developer security tools, infrastructure, backend systems, and human-centered technology.",
+  description: "Timothy Sebastian Darmawan builds security and systems projects spanning threat detection, source-code scanning, self-hosted infrastructure, and automated media.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

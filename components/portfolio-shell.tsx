@@ -165,9 +165,9 @@ function Home({ onProjects }: { onProjects: () => void }) {
       <div className="bootline"><span>[ OK ]</span> profile mounted from /dev/curiosity</div>
       <div className="hero-grid">
         <div>
-          <p className="path-label">~/README.md</p>
-          <h1>I build systems,<br /><em>secure software,</em><br />and break Linux.</h1>
-          <p className="lede">Cyber Security student exploring DevSecOps, backend engineering, infrastructure, and human-centered technology through things I actually build.</p>
+          <p className="path-label">~/README.md · Cyber Security student</p>
+          <h1>Timothy Sebastian<br /><em>Darmawan.</em></h1>
+          <p className="lede">I build security and systems projects—from Nolen’s explainable threat detection and Sentinel’s source-code scanning to self-hosted infrastructure and automated media pipelines.</p>
           <div className="hero-actions">
             <button className="primary-action" onClick={onProjects}>./explore-work</button>
             <a href="https://github.com/timsurrealedu" target="_blank" rel="noreferrer">git remote -v ↗</a>
