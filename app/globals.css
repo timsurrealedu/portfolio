@@ -87,7 +87,9 @@ h1, h2, p { text-wrap: pretty; }
 .hero-actions button, .hero-actions a { border: 1px solid var(--line); background: var(--panel); padding: .75rem 1rem; text-decoration: none; cursor: pointer; font-weight: 800; box-shadow: 4px 4px 0 color-mix(in oklch, var(--line) 65%, transparent); transition: background-color .18s, color .18s, transform .18s, box-shadow .18s; }
 .hero-actions .primary-action { background: var(--yellow); color: var(--bg); border-color: var(--yellow); }
 .hero-actions button:hover, .hero-actions a:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--line); }
-.ascii { margin: 0; color: var(--yellow); font: 700 clamp(.68rem, 1vw, .9rem)/1.55 var(--font); filter: drop-shadow(5px 5px 0 color-mix(in oklch, var(--orange) 32%, transparent)); user-select: none; }
+.hero-portrait { width: clamp(10rem, 17vw, 13rem); margin: 0; border: 1px solid var(--yellow); background: var(--panel); box-shadow: 6px 6px 0 var(--orange); }
+.hero-portrait img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 32%; filter: saturate(.78) contrast(1.08); }
+.hero-portrait figcaption { padding: .45rem .6rem; color: var(--yellow); font-size: .68rem; text-align: center; }
 .proof-strip { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 1.5rem; border: 1px solid var(--line); background: var(--panel); box-shadow: 6px 6px 0 color-mix(in oklch, var(--line) 50%, transparent); }
 .proof-strip div { padding: .65rem .8rem; border-right: 1px solid var(--line); }
 .proof-strip div:last-child { border: 0; }
@@ -267,7 +269,7 @@ code { background: var(--panel-2); color: var(--yellow); padding: .1rem .25rem; 
   .document { padding: 2rem 1rem 3rem; }
   .tabline { display: none; }
   .hero-grid { grid-template-columns: 1fr; }
-  .ascii { display: none; }
+  .hero-portrait { width: min(100%, 14rem); }
   .proof-strip { grid-template-columns: repeat(2, 1fr); }
   .proof-strip div:nth-child(2) { border-right: 0; }
   .proof-strip div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }

@@ -24,7 +24,7 @@ Security, systems, building, and leadership—demonstrated through work rather t
 
 - Primary CTA: explore selected projects.
 - Secondary CTA: visit GitHub and make contact.
-- The line a visitor remembers after 10 seconds: “Timothy builds security and systems projects—from explainable threat detection to self-hosted infrastructure.”
+- The line a visitor remembers after 10 seconds: “Timothy designs security detections, builds software, operates infrastructure, and explains technical work clearly.”
 - Belief ladder: Timothy is curious → he ships and operates real systems → he understands security and infrastructure tradeoffs → he can own work and communicate it.
 - Proof on hand: Nolen, Sentinel, LifeOS, Stewie, TPM backend work, ADP program leadership, public speaking, and IELTS 8.0.
 

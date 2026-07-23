@@ -167,24 +167,16 @@ function Home({ onProjects }: { onProjects: () => void }) {
         <div>
           <p className="path-label">~/README.md · Cyber Security student</p>
           <h1>Timothy Sebastian<br /><em>Darmawan.</em></h1>
-          <p className="lede">I build security and systems projects—from Nolen’s explainable threat detection and Sentinel’s source-code scanning to self-hosted infrastructure and automated media pipelines.</p>
+          <p className="lede">I design security detections, build backend services and developer tools, operate Linux and cloud infrastructure, prototype user-centered products, and automate technical media workflows.</p>
           <div className="hero-actions">
             <button className="primary-action" onClick={onProjects}>./explore-work</button>
             <a href="https://github.com/timsurrealedu" target="_blank" rel="noreferrer">git remote -v ↗</a>
           </div>
         </div>
-        <pre className="ascii" aria-label="Abstract TS monogram">
-{`┌────────────────┐
-│ SYS::TIMOTHY   │
-├──────┬─────────┤
-│  ╱╲  │ SEC  01 │
-│ ╱TS╲ │ SYS  01 │
-│ ╲  ╱ │ BLD  01 │
-│  ╲╱  │ LDR  01 │
-├──────┴─────────┤
-│ LEARN → BREAK  │
-│ DEBUG → BUILD  │
-└────────────────┘`}</pre>
+        <figure className="hero-portrait">
+          <img src="/timothy-speaking.png" alt="Timothy Sebastian Darmawan speaking at a student event" />
+          <figcaption>build · test · explain</figcaption>
+        </figure>
       </div>
       <div className="proof-strip">
         <div><strong>{projects.length}</strong><span>selected projects</span></div>
