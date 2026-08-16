@@ -189,7 +189,7 @@ export const organizations = [
 export const experience: readonly Experience[] = [
   { year: "2026", role: "Media Partner Team · BNCC CSR 2026", org: "BNCC", note: "Supported external communications for the CSR event by coordinating media-partner visibility, promotional touchpoints, and event-facing publication flow." },
   { year: "Feb 2026", role: "Backend Developer · TPM Final Project", org: "BNCC", note: "Built registration, login, dashboard support, Prisma integration, and cross-team debugging for a hackathon platform." },
-  { year: "2025", role: "PIC · ADP Adobe After Effects Learning Program", org: "BNCC HRD", note: "Led a six-person organizing team and owned three weeks of Adobe After Effects sessions: coordinating facilitators, opening and closing Zoom sessions, tracking attendance, and following up on assignments.", image: "/portfolio/bncc-adp-certificate.jpg", alt: "BNCC HRD certificate naming Timothy Sebastian Darmawan as Head of Committee ADP" },
+  { year: "Jul—Aug 2026", role: "PIC · ADP Adobe After Effects Learning Program", org: "BNCC HRD", note: "Led a six-person organizing team and owned three weeks of Adobe After Effects sessions: coordinating facilitators, opening and closing Zoom sessions, tracking attendance, and following up on assignments.", image: "/portfolio/bncc-adp-certificate.jpg", alt: "BNCC HRD certificate naming Timothy Sebastian Darmawan as Head of Committee ADP" },
   { year: "2025", role: "DevSecOps Pipeline Standardization · Proposal", org: "BNCC R&D", note: "Proposed a program kerja using GitHub Actions, SonarCloud, and Trivy; it was never implemented or deployed." },
 ] as const;
 

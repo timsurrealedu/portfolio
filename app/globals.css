@@ -17,6 +17,13 @@
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+* { scrollbar-color: var(--yellow) var(--panel); scrollbar-width: thin; }
+*::-webkit-scrollbar { width: .8rem; height: .8rem; }
+*::-webkit-scrollbar-track { background: var(--panel); border: 1px solid var(--line); }
+*::-webkit-scrollbar-thumb { background: var(--yellow); border: 2px solid var(--panel); border-radius: 0; }
+*::-webkit-scrollbar-thumb:hover { background: var(--orange); }
+*::-webkit-scrollbar-corner { background: var(--panel); }
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 14px; line-height: 1.65; }
