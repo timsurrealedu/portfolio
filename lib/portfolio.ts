@@ -1,6 +1,6 @@
 export type SectionId = "home" | "projects" | "experience" | "about" | "contact";
 type MediaAsset = { src: string; alt: string; caption: string };
-type Project = { slug: string; index: string; name: string; type: string; status: string; summary: string; detail: string; stack: readonly string[]; href?: string; media?: MediaAsset };
+type Project = { slug: string; index: string; name: string; type: string; status: string; summary: string; detail: string; stack: readonly string[]; href?: string; websiteLinks?: readonly { label: string; href: string }[]; media?: MediaAsset | readonly MediaAsset[] };
 type Credential = { title: string; issuer: string; kind: string; year: string; media?: MediaAsset };
 
 export const sections: { id: SectionId; label: string; command: string; key: string }[] = [
@@ -13,8 +13,26 @@ export const sections: { id: SectionId; label: string; command: string; key: str
 
 export const projects: readonly Project[] = [
   {
-    slug: "nolen",
+    slug: "terang-darma-jaya",
     index: "01",
+    name: "Terang Darma Jaya",
+    type: "corporate website design & development",
+    status: "live",
+    summary: "Designed and built Terang Darma Jaya’s website, pairing a polished corporate presentation with purposeful motion and interaction.",
+    detail: "Owned the website design and implementation, including animated interface details and responsive presentation. Also configured Google Tag Manager to support website tracking.",
+    stack: ["Web design", "Frontend development", "UI animation", "Google Tag Manager"],
+    websiteLinks: [
+      { label: "terangdarmajaya.com", href: "https://terangdarmajaya.com" },
+      { label: "terangdarmajaya.co.id", href: "https://terangdarmajaya.co.id" },
+    ],
+    media: [
+      { src: "/portfolio/terang-darma-jaya-com.png", alt: "Terang Darma Jaya website home page on terangdarmajaya.com", caption: "Live site — terangdarmajaya.com" },
+      { src: "/portfolio/terang-darma-jaya-co-id.png", alt: "Terang Darma Jaya website home page on terangdarmajaya.co.id", caption: "Live site — terangdarmajaya.co.id" },
+    ],
+  },
+  {
+    slug: "nolen",
+    index: "02",
     name: "Nolen",
     type: "security telemetry & incident detection",
     status: "team MVP verified",
@@ -25,7 +43,7 @@ export const projects: readonly Project[] = [
   },
   {
     slug: "sentinel",
-    index: "02",
+    index: "03",
     name: "Sentinel",
     type: "security tooling",
     status: "in development",
@@ -35,7 +53,7 @@ export const projects: readonly Project[] = [
   },
   {
     slug: "lifeos",
-    index: "03",
+    index: "04",
     name: "LifeOS",
     type: "personal infrastructure",
     status: "operational",
@@ -50,7 +68,7 @@ export const projects: readonly Project[] = [
   },
   {
     slug: "smartwarga",
-    index: "04",
+    index: "05",
     name: "SmartWarga",
     type: "group product project",
     status: "contribution documented",
@@ -60,7 +78,7 @@ export const projects: readonly Project[] = [
   },
   {
     slug: "stewie",
-    index: "05",
+    index: "06",
     name: "Stewie",
     type: "automated media pipeline",
     status: "active prototype",
@@ -71,7 +89,7 @@ export const projects: readonly Project[] = [
   },
   {
     slug: "devsecops-proposal",
-    index: "06",
+    index: "07",
     name: "DevSecOps Pipeline Standardization",
     type: "BNCC R&D program proposal",
     status: "proposed · not implemented",
@@ -81,7 +99,7 @@ export const projects: readonly Project[] = [
   },
   {
     slug: "mindvault",
-    index: "07",
+    index: "08",
     name: "MindVault",
     type: "UI/UX product prototype",
     status: "high-fidelity prototype",
@@ -92,7 +110,7 @@ export const projects: readonly Project[] = [
   },
   {
     slug: "automatic-trash-bin",
-    index: "08",
+    index: "09",
     name: "Automatic Trash Bin",
     type: "embedded systems prototype",
     status: "functional prototype",
