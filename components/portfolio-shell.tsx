@@ -238,7 +238,7 @@ function Experience() {
       <div className="experience-group">
         <h2><span>02</span> Selected responsibilities</h2>
         <div className="timeline">
-          {experience.map((item, index) => <article key={item.role}><span className="line-no">{String(index + 1).padStart(2, "0")}</span><time>{item.year}</time><div><p>{item.org}</p><h3>{item.role}</h3><span>{item.note}</span></div></article>)}
+          {experience.map((item, index) => <article key={item.role}><span className="line-no">{String(index + 1).padStart(2, "0")}</span><time>{item.year}</time><div><p>{item.org}</p><h3>{item.role}</h3><span>{item.note}</span>{item.image && <img className="timeline-proof" src={item.image} alt={item.alt} />}</div></article>)}
         </div>
       </div>
 

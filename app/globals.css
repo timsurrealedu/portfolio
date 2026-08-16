@@ -153,6 +153,7 @@ blockquote span { position: absolute; left: 0; top: 0; color: var(--orange); fon
 .timeline p { margin: 0; color: var(--aqua); font-size: .72rem; }
 .timeline h3 { margin: .15rem 0 .4rem; font-size: 1.05rem; }
 .timeline div span { color: var(--muted); }
+.timeline-proof { display: block; width: min(100%, 32rem); max-height: 18rem; margin-top: .85rem; border: 1px solid var(--line); object-fit: contain; background: oklch(0.16 0.008 75); }
 .evidence-layout { display: grid; grid-template-columns: minmax(18rem, 1.2fr) minmax(15rem, .8fr); gap: 1.5rem; }
 .event-stack { display: grid; gap: .75rem; }
 .event-proof { display: grid; grid-template-columns: minmax(8rem, .65fr) 1fr; margin: 0; border: 1px solid var(--line); background: var(--panel); }

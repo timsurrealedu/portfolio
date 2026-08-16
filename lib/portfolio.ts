@@ -2,6 +2,7 @@ export type SectionId = "home" | "projects" | "experience" | "about" | "contact"
 type MediaAsset = { src: string; alt: string; caption: string };
 type Project = { slug: string; index: string; name: string; type: string; status: string; summary: string; detail: string; stack: readonly string[]; href?: string; websiteLinks?: readonly { label: string; href: string }[]; media?: MediaAsset | readonly MediaAsset[] };
 type Credential = { title: string; issuer: string; kind: string; year: string; media?: MediaAsset };
+type Experience = { year: string; role: string; org: string; note: string; image?: string; alt?: string };
 
 export const sections: { id: SectionId; label: string; command: string; key: string }[] = [
   { id: "home", label: "overview", command: "whoami", key: "H" },
@@ -185,10 +186,10 @@ export const organizations = [
   },
 ];
 
-export const experience = [
+export const experience: readonly Experience[] = [
   { year: "2026", role: "Media Partner Team · BNCC CSR 2026", org: "BNCC", note: "Supported external communications for the CSR event by coordinating media-partner visibility, promotional touchpoints, and event-facing publication flow." },
   { year: "Feb 2026", role: "Backend Developer · TPM Final Project", org: "BNCC", note: "Built registration, login, dashboard support, Prisma integration, and cross-team debugging for a hackathon platform." },
-  { year: "2025", role: "PIC · ADP Learning Program", org: "BNCC HRD", note: "Led six organizers and owned three weeks of live sessions, attendance, follow-up, and continuity." },
+  { year: "2025", role: "PIC · ADP Adobe After Effects Learning Program", org: "BNCC HRD", note: "Led a six-person organizing team and owned three weeks of Adobe After Effects sessions: coordinating facilitators, opening and closing Zoom sessions, tracking attendance, and following up on assignments.", image: "/portfolio/bncc-adp-certificate.jpg", alt: "BNCC HRD certificate naming Timothy Sebastian Darmawan as Head of Committee ADP" },
   { year: "2025", role: "DevSecOps Pipeline Standardization · Proposal", org: "BNCC R&D", note: "Proposed a program kerja using GitHub Actions, SonarCloud, and Trivy; it was never implemented or deployed." },
 ] as const;
 
