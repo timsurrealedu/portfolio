@@ -66,7 +66,7 @@ export function PortfolioShell() {
   }
 
   return (
-    <div className={`site-shell ${terminalOpen ? "terminal-open" : "terminal-collapsed"}`} aria-busy={booting}>
+    <div className={`site-shell ${section === "home" ? "sidebar-expanded" : "sidebar-collapsed"} ${terminalOpen ? "terminal-open" : "terminal-collapsed"}`} aria-busy={booting}>
       {booting && <BootScreen />}
       <a className="skip-link" href="#viewport">Skip to content</a>
       <header className="topbar">

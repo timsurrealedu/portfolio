@@ -38,6 +38,7 @@ button { color: inherit; }
 .skip-link:focus { top: .5rem; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 .site-shell { height: 100svh; display: grid; grid-template: var(--top) minmax(0, 1fr) 5.5rem var(--bottom) / 15.5rem minmax(0, 1fr) 19rem; overflow: hidden; }
+.site-shell.sidebar-collapsed { grid-template-columns: 3.25rem minmax(0, 1fr) 19rem; }
 .boot-screen { position: fixed; z-index: 30; inset: 0; display: grid; place-items: center; background: var(--bg); animation: boot-exit 1.15s var(--ease-out) both; contain: paint; }
 .boot-console { width: min(36rem, calc(100vw - 2rem)); border: 1px solid var(--line); background: var(--panel); box-shadow: 8px 8px 0 var(--orange); }
 .boot-console header { display: flex; justify-content: space-between; padding: .65rem 1rem; border-bottom: 1px solid var(--line); color: var(--muted); font-size: .72rem; }
@@ -61,6 +62,11 @@ button { color: inherit; }
 
 .tree, .inspector { min-height: 0; background: var(--panel); }
 .tree { grid-column: 1; grid-row: 2; border-right: 1px solid var(--line); }
+.sidebar-collapsed .tree { overflow: hidden; }
+.sidebar-collapsed .tree > * { display: none; }
+.sidebar-collapsed .topbar { grid-template-columns: 3.25rem 1fr 19rem; }
+.sidebar-collapsed .brand { justify-content: center; padding: 0; }
+.sidebar-collapsed .brand > span:last-child { display: none; }
 .inspector { grid-column: 3; grid-row: 2; border-left: 1px solid var(--line); padding-bottom: 1rem; overflow: auto; }
 .pane-title { height: 2.55rem; display: flex; justify-content: space-between; align-items: center; padding: 0 1rem; border-bottom: 1px solid var(--line); color: var(--muted); font-size: .7rem; letter-spacing: .12em; font-weight: 800; }
 .tree-root { padding: 1rem 1rem .55rem; color: var(--yellow); font-weight: 800; }
@@ -258,6 +264,8 @@ code { background: var(--panel-2); color: var(--yellow); padding: .1rem .25rem; 
   .topbar { grid-template-columns: 13rem 1fr auto; }
   .inspector { display: none; }
   .viewport { grid-column: 2; }
+  .site-shell.sidebar-collapsed { grid-template-columns: 3.25rem minmax(0, 1fr); }
+  .sidebar-collapsed .topbar { grid-template-columns: 3.25rem 1fr auto; }
   .project-list button { grid-template-columns: 2rem 1fr 2.5rem; }
   .project-list small { display: none; }
 }
@@ -276,6 +284,7 @@ code { background: var(--panel-2); color: var(--yellow); padding: .1rem .25rem; 
   .tree nav button { width: auto; grid-template-columns: 1fr auto; gap: .1rem; border-left: 0; border-bottom: 3px solid transparent; padding: .7rem .9rem .55rem; }
   .tree nav button.active { border-bottom-color: var(--yellow); }
   .tree-branch { display: none; }
+  .sidebar-collapsed .tree { display: none; }
   .viewport { grid-column: 1; grid-row: 3; }
   .document { padding: 2rem 1rem 3rem; }
   .tabline { display: none; }
@@ -359,6 +368,12 @@ code { background: var(--panel-2); color: var(--yellow); padding: .1rem .25rem; 
   .terminal-body { padding: .35rem .75rem; }
   .terminal-body > p { display: none; }
   .terminal-body form { grid-column: 1 / -1; }
+  .site-shell.sidebar-collapsed.terminal-open { grid-template-rows: var(--top) minmax(0, 1fr) 7.5rem var(--bottom); }
+  .site-shell.sidebar-collapsed.terminal-collapsed { grid-template-rows: var(--top) minmax(0, 1fr) 2.4rem var(--bottom); }
+  .site-shell.sidebar-collapsed { grid-template-columns: 1fr; }
+  .sidebar-collapsed .viewport { grid-row: 2; }
+  .sidebar-collapsed .terminal { grid-row: 3; }
+  .sidebar-collapsed .statusbar { grid-row: 4; }
 }
 /* Mechanical motion pass: discrete terminal frames, never soft fades. */
 .boot-screen { animation: boot-eject .88s steps(8, end) both; }
