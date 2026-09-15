@@ -1,0 +1,423 @@
+{
+  "personalInfo": {
+    "fullName": "Timothy Sebastian Darmawan",
+    "preferredName": "Timothy",
+    "handle": "timsurreal",
+    "title": "Cyber Security Student · AI Systems & DevSecOps Enthusiast · Full-Stack & Backend Developer",
+    "location": "Jakarta, Indonesia",
+    "email": "td522637@gmail.com",
+    "phone": "+62 877 7717 9775",
+    "instagram": "@timsurreal",
+    "github": "https://github.com/timsurrealedu",
+    "website": "https://terangdarmajaya.com",
+    "linkedin": "https://github.com/timsurrealedu"
+  },
+  "summary": "Cyber Security student at Bina Nusantara University combining practical depth in AppSec, DevSecOps, and Linux infrastructure with advanced hands-on expertise in LLM agent harnesses, prompt caching economics, and AI orchestration. Experienced in developing threat detection engines, building resilient backend & web systems (TypeScript, Next.js, Node.js, Prisma), benchmark testing frontier and open-weight models, and leading technical teams.",
+  "focusAreas": [
+    "Security & DevSecOps",
+    "AI Engineering & Agent Harnesses",
+    "Full-Stack & Backend Systems",
+    "Linux & Self-Hosted Infrastructure",
+    "Technical Leadership & Communication"
+  ],
+  "education": [
+    {
+      "institution": "Bina Nusantara University",
+      "degree": "Bachelor of Computer Science in Cyber Security",
+      "period": "2025 — Expected 2029",
+      "location": "Jakarta, Indonesia",
+      "details": "Specializing in application security, network protection, DevSecOps, Linux systems, AI tooling, and scientific computing."
+    },
+    {
+      "institution": "SMAK 1 BPK PENABUR Jakarta",
+      "degree": "High School Diploma, Science Major",
+      "period": "2022 — 2025",
+      "location": "Jakarta, Indonesia",
+      "details": "Graduated with strong scientific analytical foundation and high English proficiency (IELTS Band 8.0)."
+    }
+  ],
+  "technicalProjects": [
+    {
+      "name": "Nolen",
+      "role": "Cybersecurity & Detection Lead",
+      "type": "Open-Source Linux Security Telemetry Platform",
+      "period": "2026",
+      "link": "https://github.com/timsurrealedu/nolen",
+      "highlights": [
+        "Authored complete threat model, telemetry security requirements, detection-as-code rules, and MITRE ATT&CK mappings.",
+        "Designed deterministic SSH-compromise correlation engine and false-positive boundaries over NATS JetStream.",
+        "Built safe attack simulation suite and passed 52 automated tests plus 6 offline scenarios producing confidence-80 incidents from 12 unique evidence events."
+      ],
+      "tags": [
+        "AppSec",
+        "Threat Modeling",
+        "Detection Engineering",
+        "Node.js",
+        "NATS JetStream",
+        "MITRE ATT&CK"
+      ]
+    },
+    {
+      "name": "Noema",
+      "role": "Creator & Systems Engineer",
+      "type": "Self-Hosted Autonomous Workspace & Personal Infrastructure",
+      "period": "2025 — Present",
+      "link": "https://github.com/timsurrealedu/Noema",
+      "highlights": [
+        "Architected a responsive Next.js PWA frontend backed by Node.js 22 LTS, SQLite, authenticated APIs, and durable background jobs.",
+        "Integrated isolated Codex/CLI execution environments and Bubblewrap sandbox compilation for safe tool orchestration.",
+        "Deployed on Oracle Cloud A1 Flex Linux with Tailscale private encrypted mesh network and automated multi-device sync."
+      ],
+      "tags": [
+        "Next.js",
+        "PWA",
+        "SQLite",
+        "Linux",
+        "Tailscale",
+        "Bubblewrap Sandbox",
+        "Systemd"
+      ]
+    },
+    {
+      "name": "ReviewTap",
+      "role": "Creator & Full-Stack Engineer",
+      "type": "NFC & QR Smart Google Review B2B SaaS Platform",
+      "period": "2026",
+      "link": "https://github.com/timsurrealedu/ayoreview",
+      "highlights": [
+        "Architected B2B SaaS + hardware platform pairing physical NFC acrylic cards/stands with dynamic QR codes for in-store Google review acquisition.",
+        "Engineered sub-second (<1s) dynamic redirect engine allowing merchants to update target review destinations centrally without reprinting physical hardware.",
+        "Built merchant onboarding dashboard, multi-location management, batch inventory allocation, and interaction telemetry backed by Supabase PostgreSQL (RLS).",
+        "Developed high-performance responsive web application using Next.js 15, TailwindCSS v4, and TypeScript."
+      ],
+      "tags": [
+        "Next.js 15",
+        "TailwindCSS v4",
+        "Supabase",
+        "PostgreSQL",
+        "NFC Hardware",
+        "B2B SaaS",
+        "Dynamic Redirect"
+      ]
+    },
+    {
+      "name": "Terang Darma Jaya Website",
+      "role": "Web Designer & Frontend Developer",
+      "type": "Corporate Web Platform & Analytics",
+      "period": "2025",
+      "link": "https://terangdarmajaya.com",
+      "highlights": [
+        "Designed and developed production corporate website for PT Terang Darma Jaya (terangdarmajaya.com & terangdarmajaya.co.id).",
+        "Implemented custom responsive UI animations, interactive components, and professional company branding.",
+        "Integrated Google Tag Manager and web telemetry for user behavior tracking and conversion analytics."
+      ],
+      "tags": [
+        "Web Design",
+        "Frontend Dev",
+        "UI Animation",
+        "Google Tag Manager",
+        "Production Deployment"
+      ]
+    },
+    {
+      "name": "SmartWarga",
+      "role": "Lead Developer & System Architect",
+      "type": "Integrated RT/RW Community Governance Platform",
+      "period": "2026",
+      "link": "https://github.com/timsurrealedu/SmartWarga",
+      "highlights": [
+        "Built a modern mobile-first community management ecosystem connecting neighborhood administrators and residents.",
+        "Engineered automated dues verification workflow, dynamic billing queues, real-time cashflow analytics, and resident directory.",
+        "Implemented emergency broadcast / panic alert channels and role-based access control for administrative safety."
+      ],
+      "tags": [
+        "TypeScript",
+        "Next.js",
+        "TailwindCSS",
+        "Full-Stack",
+        "Mobile-First",
+        "State Management"
+      ]
+    },
+    {
+      "name": "GuruAI",
+      "role": "Creator & AI Engineer",
+      "type": "AI Pedagogical Co-Pilot for Indonesian Educators",
+      "period": "2026",
+      "link": "https://github.com/timsurrealedu/guruAI",
+      "highlights": [
+        "Developed an intelligent co-pilot platform tailored for Indonesian educators aligned with the Kurikulum Merdeka framework.",
+        "Designed structured AI generation pipelines for RPP/Modul Ajar lesson plans, Bloom's cognitive taxonomy evaluations, and rubric generation.",
+        "Created teacher DNA profile onboarding system to customize pedagogical voice, methodology, and classroom constraints."
+      ],
+      "tags": [
+        "TypeScript",
+        "Next.js",
+        "LLM Prompt Engineering",
+        "Kurikulum Merdeka",
+        "Pedagogical AI"
+      ]
+    },
+    {
+      "name": "Sentinel",
+      "role": "Creator & Lead Developer",
+      "type": "Developer-Oriented Security Scanner Platform",
+      "period": "2025 — Present",
+      "link": "https://github.com/timsurrealedu/sentinel",
+      "highlights": [
+        "Architected repository scanning workflows to detect exposed API keys, secrets, and application vulnerability patterns.",
+        "Structured security findings with exact line-level references, severity ratings, and actionable remediation instructions.",
+        "Engineered background worker workloads and unified CLI/API interfaces for seamless DevSecOps integration."
+      ],
+      "tags": [
+        "DevSecOps",
+        "AppSec",
+        "TypeScript",
+        "Static Analysis",
+        "Security Tooling",
+        "API Design"
+      ]
+    },
+    {
+      "name": "CTF Competition Agent Skill & DevSecOps Labs",
+      "role": "Security Researcher & AI Tooling Developer",
+      "type": "Autonomous Agent Skills & CI/CD Security Automation",
+      "period": "2026",
+      "link": "https://github.com/timsurrealedu/ctf-competition",
+      "highlights": [
+        "Authored ctf-competition agent skill orchestrating long-running CTF investigations with persistent hypothesis tracking, token-budget discipline, and checkpoint compaction.",
+        "Implemented automated CI/CD security scanning workflows using GitHub Actions, SonarCloud quality gates, and Trivy vulnerability checks in SonarCloudTrivy and devsecblueprint."
+      ],
+      "tags": [
+        "AI Agent Skills",
+        "CTF",
+        "DevSecOps",
+        "GitHub Actions",
+        "Trivy",
+        "SonarCloud"
+      ]
+    },
+    {
+      "name": "Stewie",
+      "role": "Creator",
+      "type": "CPU-First Automated Video Content Pipeline",
+      "period": "2026",
+      "link": "https://github.com/timsurrealedu/stewie",
+      "highlights": [
+        "Engineered automated media pipeline turning tech topics into short vertical educational videos (1080x1920).",
+        "Implemented multi-provider LLM fallback chain, Kokoro/Piper voice synthesis, per-line timing, and ffmpeg rendering.",
+        "Gated YouTube publishing behind manual approval controls with automated thumbnail and metadata generation."
+      ],
+      "tags": [
+        "Python",
+        "ffmpeg",
+        "LLM Routing",
+        "Voice Synthesis",
+        "Media Automation"
+      ]
+    },
+    {
+      "name": "Obsidian Automation Engine",
+      "role": "Creator & Systems Developer",
+      "type": "Capture-Once Knowledge Ingestion & Organization Pipeline",
+      "period": "2026",
+      "link": "https://github.com/timsurrealedu/obsidianAutomation",
+      "highlights": [
+        "Engineered an automated knowledge ingestion pipeline transforming raw unorganized notes, voice dictations, and whiteboard photos into structured second-brain notes.",
+        "Implemented batch AI processing with Claude Code for auto-summarization, bi-directional link generation ([[links]]), tag clustering, and Google Calendar event sync."
+      ],
+      "tags": [
+        "Knowledge Systems",
+        "Claude Code Batch",
+        "Shell Scripting",
+        "Multimodal Ingestion",
+        "Obsidian"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Head of Committee / PIC — ADP Adobe After Effects Program",
+      "organization": "Bina Nusantara Computer Club (BNCC HRD)",
+      "period": "Jul 2026 — Aug 2026",
+      "location": "Jakarta, Indonesia",
+      "highlights": [
+        "Led a 6-person organizing team directing a 3-week internal BNCC learning program.",
+        "Facilitated weekly live Zoom sessions, senior speaker coordination, attendance management, and assignment tracking."
+      ]
+    },
+    {
+      "role": "Backend Developer — Technology Project Member Final Project",
+      "organization": "Bina Nusantara Computer Club (BNCC)",
+      "period": "Feb 2026",
+      "location": "Jakarta, Indonesia",
+      "highlights": [
+        "Engineered backend services for user registration, authentication, and user dashboard for a hackathon platform.",
+        "Integrated Prisma ORM with Node.js/Express web servers and debugged cross-functional API contracts."
+      ]
+    },
+    {
+      "role": "Research & Development (R&D) Activist",
+      "organization": "Bina Nusantara Computer Club (BNCC)",
+      "period": "Nov 2025 — Present",
+      "location": "Jakarta, Indonesia",
+      "highlights": [
+        "Practiced backend development (Node.js, Express, Prisma, JWT authentication, REST APIs).",
+        "Formulated program proposals for technical subdivisions and presented in front of senior evaluators.",
+        "Authored proposal for DevSecOps CI/CD standardization using GitHub Actions, SonarCloud, and Trivy."
+      ]
+    },
+    {
+      "role": "Human Resource Development (HRD) Activist",
+      "organization": "Bina Nusantara Computer Club (BNCC)",
+      "period": "Nov 2025 — Present",
+      "location": "Jakarta, Indonesia",
+      "highlights": [
+        "Conducted organizational problem analysis using SWOT frameworks and member survey data.",
+        "Formulated member development initiatives and managed Google Sheets tracking workflows."
+      ]
+    },
+    {
+      "role": "Media Partner Team Member",
+      "organization": "BNCC CSR 2026",
+      "period": "2026",
+      "location": "Jakarta, Indonesia",
+      "highlights": [
+        "Researched external tech/media partners and organized partner prospect databases.",
+        "Prepared tailored partnership proposals and coordinated promotional publications."
+      ]
+    },
+    {
+      "role": "Member",
+      "organization": "Google Developer Groups on Campus (GDG on Campus)",
+      "period": "Nov 2025 — Present",
+      "location": "Jakarta, Indonesia",
+      "highlights": [
+        "Active member participating in developer workshops, cloud & AI technologies, and campus tech community events."
+      ]
+    },
+    {
+      "role": "Activist (Small Group Coordination)",
+      "organization": "Persekutuan Oikumene (PO)",
+      "period": "Nov 2025 — Present",
+      "location": "Jakarta, Indonesia",
+      "highlights": [
+        "Tracked weekly small group progress, reminded group leaders to submit updates, and supported internal accountability."
+      ]
+    },
+    {
+      "role": "Member",
+      "organization": "Cyber Security Community (CSC)",
+      "period": "Nov 2025 — Present",
+      "location": "Jakarta, Indonesia",
+      "highlights": [
+        "Active member in campus cybersecurity peer community focused on digital defense, CTF challenges, and knowledge sharing."
+      ]
+    },
+    {
+      "role": "Member",
+      "organization": "ISACA Student Group (ISG)",
+      "period": "Nov 2025 — Present",
+      "location": "Jakarta, Indonesia",
+      "highlights": [
+        "Student member participating in IT audit workshops and cybersecurity governance events."
+      ]
+    }
+  ],
+  "engagementsAndSpeaking": [
+    {
+      "title": "Guest Speaker — Artificial Intelligence Fundamentals",
+      "organization": "SMA Wardaya",
+      "period": "2025",
+      "details": "Delivered an interactive lecture to Grade 11 students covering AI technology, societal impacts, strategic opportunities, and cultural risks."
+    },
+    {
+      "title": "Youth Group Leader",
+      "organization": "SIL Annual Church Event",
+      "period": "2025",
+      "details": "Mentored young teens, ensuring safety, engagement, and leadership throughout event operations."
+    }
+  ],
+  "certifications": [
+    {
+      "title": "ARISE Bootcamp IT Audit Certificate",
+      "issuer": "ISACA Student Group BINUS University",
+      "year": "2026"
+    },
+    {
+      "title": "BNCC Technology Project Member Back-End Development Certificate",
+      "issuer": "Bina Nusantara Computer Club",
+      "year": "2026"
+    },
+    {
+      "title": "IT FAIR XIV UI/UX Design Competition Certificate of Participation",
+      "issuer": "HIMATIF UIN Sunan Gunung Djati Bandung",
+      "year": "2026"
+    }
+  ],
+  "skills": {
+    "security": [
+      "Application Security (AppSec)",
+      "Threat Modeling",
+      "Detection Engineering",
+      "MITRE ATT&CK Mapping",
+      "DevSecOps",
+      "Trivy",
+      "SonarCloud",
+      "CI/CD Security Workflows",
+      "CTF Challenge Analysis"
+    ],
+    "aiAndAgents": [
+      "Agentic CLI Harnesses (Reasonix, Claude Code, Codex, OpenCode, Bernstein)",
+      "Prompt Caching Architecture & Context Optimization",
+      "Token Economics & High-Throughput / Low-Latency Pipelines",
+      "Agent Skills & Tool Customization (ctf-competition, prompt compression)",
+      "Frontier & Open-Weight Benchmarking (Claude 3.5/3.7/Opus, GPT-4o/o1/o3, GLM-4/5, Kimi 2.5/3, Qwen 2.5/3 Max, DeepSeek V3/V4/R1)",
+      "Structured LLM Output & Function Calling"
+    ],
+    "backendAndWeb": [
+      "TypeScript / JavaScript",
+      "Next.js 15 (App Router, PWA)",
+      "Node.js & Express.js",
+      "Prisma ORM",
+      "RESTful API Design",
+      "JWT Authentication",
+      "Supabase / PostgreSQL / SQLite / MariaDB",
+      "TailwindCSS v4",
+      "Python"
+    ],
+    "systems": [
+      "Linux Systems (Arch Linux, NixOS, Fedora)",
+      "System Administration",
+      "Oracle Cloud Infrastructure (OCI)",
+      "Tailscale VPN / Mesh Networking",
+      "Syncthing",
+      "Bubblewrap Sandbox Isolation",
+      "Niri / Hyprland Wayland Compositors",
+      "Bash / Unix Tooling",
+      "Neovim"
+    ],
+    "leadership": [
+      "Project & Team Management",
+      "Program Planning",
+      "Public Speaking & Presentation",
+      "SWOT Analysis",
+      "Technical Communication",
+      "Community Coordination"
+    ]
+  },
+  "languages": [
+    {
+      "language": "English",
+      "proficiency": "Professional Proficiency (IELTS Band 8.0)"
+    },
+    {
+      "language": "Indonesian",
+      "proficiency": "Native Proficiency"
+    },
+    {
+      "language": "Mandarin",
+      "proficiency": "Elementary / Basic Conversational"
+    }
+  ]
+}

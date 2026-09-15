@@ -4,10 +4,11 @@ import { FormEvent, useEffect, useRef, useState } from "react";
 import { credentials, engagements, experience, organizations, projects, sections, type SectionId } from "@/lib/portfolio";
 
 const skills = [
-  ["security", "AppSec · DevSecOps · Trivy · security architecture"],
-  ["backend", "Node.js · Express · Prisma · REST APIs · authentication"],
-  ["systems", "Linux · networking · Oracle Cloud · self-hosting · NixOS"],
-  ["people", "team leadership · public speaking · program planning"],
+  ["security", "AppSec · DevSecOps · Threat Modeling · Trivy · SonarCloud · MITRE ATT&CK"],
+  ["ai & agents", "Reasonix · Claude Code · Codex · Prompt Caching · Model Benchmarking · Custom Skills"],
+  ["backend & web", "TypeScript · Next.js · Node.js · Express · Prisma · Supabase · PostgreSQL"],
+  ["systems", "Linux (Arch / NixOS) · Oracle Cloud · Tailscale · Bubblewrap · Self-Hosting"],
+  ["people", "Team leadership · Public speaking · Program planning · Technical writing"],
 ] as const;
 
 export function PortfolioShell() {
@@ -75,6 +76,7 @@ export function PortfolioShell() {
           <span>timsurreal<span className="dim">@portfolio</span></span>
         </a>
         <div className="topbar-path" aria-hidden="true">~/public/{section}<span className="cursor">_</span></div>
+        <a className="topbar-link" href="/cv" style={{ borderRight: "1px solid var(--line)", paddingRight: "1rem", paddingLeft: "1rem" }}>cv 📄</a>
         <a className="topbar-link" href="https://github.com/timsurrealedu" target="_blank" rel="noreferrer">github ↗</a>
       </header>
 
@@ -87,6 +89,9 @@ export function PortfolioShell() {
               <span className="tree-branch">├─</span><span className="file-name">{item.label}</span><span className="file-ext">.{item.id === "projects" ? "dir" : "md"}</span>
             </button>
           ))}
+          <a href="/cv" style={{ display: "flex", alignItems: "center", gap: ".4rem", padding: ".6rem 1rem .6rem .65rem", textDecoration: "none", color: "var(--yellow)", fontWeight: "bold" }}>
+            <span className="tree-branch" style={{ color: "var(--muted)" }}>└─</span><span className="file-name">cv</span><span className="file-ext" style={{ color: "var(--muted)" }}>.md</span> <span style={{ marginLeft: "auto", fontSize: ".8rem" }}>📄 VIEW/EDIT</span>
+          </a>
         </nav>
         <div className="tree-meta">
           <span>HOST</span><strong>Jakarta, ID</strong>
@@ -170,6 +175,7 @@ function Home({ onProjects }: { onProjects: () => void }) {
           <p className="lede">I design security detections, build backend services and developer tools, operate Linux and cloud infrastructure, prototype user-centered products, and automate technical media workflows.</p>
           <div className="hero-actions">
             <button className="primary-action" onClick={onProjects}>./explore-work</button>
+            <a href="/cv" style={{ background: "var(--yellow)", color: "var(--bg)", borderColor: "var(--yellow)" }}>view & edit cv 📄</a>
             <a href="https://github.com/timsurrealedu" target="_blank" rel="noreferrer">git remote -v ↗</a>
           </div>
         </div>
