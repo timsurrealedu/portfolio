@@ -6,7 +6,7 @@ const skills = [
   ["security", "AppSec · DevSecOps · Threat Modeling · Trivy · SonarCloud · MITRE ATT&CK"],
   ["ai & agents", "Reasonix · Claude Code · Codex · Prompt Caching · Model Benchmarking · Custom Skills"],
   ["backend & web", "TypeScript · Next.js · Node.js · Express · Prisma · Supabase · PostgreSQL"],
-  ["systems", "Linux (Arch / NixOS) · Oracle Cloud · Tailscale · Bubblewrap · Self-Hosting"],
+  ["systems", "Linux (Arch / NixOS) · Oracle Cloud · Terraform · Ansible · Tailscale · Self-Hosting"],
   ["people", "Team leadership · Public speaking · Program planning · Technical writing"],
 ] as const;
 
@@ -40,7 +40,7 @@ export function Hero() {
         <p className="hero-cmd" aria-hidden="true"><span>$</span> <span data-type="whoami">whoami</span><span className="cursor" /></p>
         <h1 id="home-title" className="hero-name">Timothy Sebastian <em>Darmawan</em></h1>
         <p className="hero-handle">aka <code>timsurreal</code> · Cyber Security at BINUS · Jakarta, UTC+7</p>
-        <p className="lead">I design security detections, build backend services and developer tools, operate Linux and cloud infrastructure, and explain technical work clearly.</p>
+        <p className="lead">I design security detections, build backend services and developer tools, operate Linux and cloud infrastructure, and explain technical work clearly. I’m also an AI enthusiast who keeps up with the latest models and agent tooling, and puts them to work.</p>
         <div className="actions">
           <a className="btn" href="#projects">./explore-work ›</a>
           <a className="btn ghost" href="/cv">view cv</a>
@@ -173,6 +173,7 @@ export function About() {
         <div className="about-copy" data-reveal>
           <p className="big">I’m Timothy Sebastian Darmawan, <code>timsurreal</code> online. I learn systems by building them, breaking them, troubleshooting them, and making the next version less fragile.</p>
           <p>My interests meet where software touches the real world: application security, backend systems, Linux, cloud infrastructure, networking, privacy, and teams that need someone to own the messy middle.</p>
+          <p>I’m an AI enthusiast too. I follow new model releases, research and agent tooling as they land, benchmark models on real tasks instead of leaderboards, and build with them: custom skills for coding agents, LLM pipelines, and AI-assisted security work.</p>
           <blockquote>“I tend to learn by building something before I fully understand it, breaking it, reading the docs, and rebuilding it better.”</blockquote>
           <dl className="facts">
             <div><dt>education</dt><dd>B.Sc. Cyber Security · BINUS<br />expected 2029 · GPA 3.97</dd></div>

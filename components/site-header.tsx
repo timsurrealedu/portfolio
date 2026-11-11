@@ -12,7 +12,7 @@ const NAV = [
   { id: "contact", label: "contact" },
 ] as const;
 
-const ALIASES: Record<string, string> = { noema: "lifeos", trashbin: "automatic-trash-bin", "automatic trashbin": "automatic-trash-bin" };
+const ALIASES: Record<string, string> = { homelab: "oci-homelab", oci: "oci-homelab", trashbin: "automatic-trash-bin", "automatic trashbin": "automatic-trash-bin" };
 const HELP = "whoami · projects · experience · certs · about · contact · open <project> · cv · github · clear";
 
 function go(id: string) {
