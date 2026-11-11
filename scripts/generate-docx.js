@@ -213,15 +213,23 @@ function createLeftColumnChildren() {
       spacing: { after: 25 },
       children: [
         new TextRun({ text: "Activist of BNCC (R&D / HRD): ", bold: true, size: 17, font: "Arial" }),
-        new TextRun({ text: "Backend APIs and DevSecOps CI/CD proposal (GitHub Actions, SonarCloud, Trivy).", size: 17, font: "Arial" }),
+        new TextRun({ text: "Backend practice, technical program planning, SWOT analysis, and member development.", size: 17, font: "Arial" }),
+      ],
+    }),
+    new Paragraph({
+      bullet: { level: 0 },
+      spacing: { after: 25 },
+      children: [
+        new TextRun({ text: "Media Partner Staff (BNCC CSR 2026): ", bold: true, size: 17, font: "Arial" }),
+        new TextRun({ text: "Coordinated external media partnerships and promotional touchpoints, awarded Certificate of Appreciation.", size: 17, font: "Arial" }),
       ],
     }),
     new Paragraph({
       bullet: { level: 0 },
       spacing: { after: 70 },
       children: [
-        new TextRun({ text: "Campus Communities: ", bold: true, size: 17, font: "Arial" }),
-        new TextRun({ text: "Google Developer Groups on Campus (GDG), Cyber Security Community (CSC), ISACA Student Group (ISG), PO.", size: 17, font: "Arial" }),
+        new TextRun({ text: "Activist of PO: ", bold: true, size: 17, font: "Arial" }),
+        new TextRun({ text: "Small group leadership, weekly progress tracking, and internal accountability.", size: 17, font: "Arial" }),
       ],
     }),
 
@@ -357,7 +365,7 @@ function createRightColumnChildren() {
       spacing: { after: 45 },
       children: [
         new TextRun({ text: "Certifications: ", bold: true, size: 17, font: "Arial" }),
-        new TextRun({ text: "ISACA ARISE IT Audit (2026), BNCC TPM Back-End (2026), IT FAIR XIV UI/UX Competition (2026).", size: 17, font: "Arial" }),
+        new TextRun({ text: "BNCC CSR 2026 Certificate of Appreciation (2026), CTF Meta4sec 3.0 Competition (2026), ISACA ARISE IT Audit (2026), BNCC TPM Back-End (2026), IT FAIR XIV UI/UX Competition (2026).", size: 17, font: "Arial" }),
       ],
     }),
   ];

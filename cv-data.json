@@ -38,27 +38,7 @@
   ],
   "technicalProjects": [
     {
-      "name": "Nolen",
-      "role": "Cybersecurity & Detection Lead",
-      "type": "Open-Source Linux Security Telemetry Platform",
-      "period": "2026",
-      "link": "https://github.com/timsurrealedu/nolen",
-      "highlights": [
-        "Authored complete threat model, telemetry security requirements, detection-as-code rules, and MITRE ATT&CK mappings.",
-        "Designed deterministic SSH-compromise correlation engine and false-positive boundaries over NATS JetStream.",
-        "Built safe attack simulation suite and passed 52 automated tests plus 6 offline scenarios producing confidence-80 incidents from 12 unique evidence events."
-      ],
-      "tags": [
-        "AppSec",
-        "Threat Modeling",
-        "Detection Engineering",
-        "Node.js",
-        "NATS JetStream",
-        "MITRE ATT&CK"
-      ]
-    },
-    {
-      "name": "Noema",
+      "name": "LifeOS",
       "role": "Creator & Systems Engineer",
       "type": "Self-Hosted Autonomous Workspace & Personal Infrastructure",
       "period": "2025 — Present",
@@ -76,47 +56,6 @@
         "Tailscale",
         "Bubblewrap Sandbox",
         "Systemd"
-      ]
-    },
-    {
-      "name": "ReviewTap",
-      "role": "Creator & Full-Stack Engineer",
-      "type": "NFC & QR Smart Google Review B2B SaaS Platform",
-      "period": "2026",
-      "link": "https://github.com/timsurrealedu/ayoreview",
-      "highlights": [
-        "Architected B2B SaaS + hardware platform pairing physical NFC acrylic cards/stands with dynamic QR codes for in-store Google review acquisition.",
-        "Engineered sub-second (<1s) dynamic redirect engine allowing merchants to update target review destinations centrally without reprinting physical hardware.",
-        "Built merchant onboarding dashboard, multi-location management, batch inventory allocation, and interaction telemetry backed by Supabase PostgreSQL (RLS).",
-        "Developed high-performance responsive web application using Next.js 15, TailwindCSS v4, and TypeScript."
-      ],
-      "tags": [
-        "Next.js 15",
-        "TailwindCSS v4",
-        "Supabase",
-        "PostgreSQL",
-        "NFC Hardware",
-        "B2B SaaS",
-        "Dynamic Redirect"
-      ]
-    },
-    {
-      "name": "Terang Darma Jaya Website",
-      "role": "Web Designer & Frontend Developer",
-      "type": "Corporate Web Platform & Analytics",
-      "period": "2025",
-      "link": "https://terangdarmajaya.com",
-      "highlights": [
-        "Designed and developed production corporate website for PT Terang Darma Jaya (terangdarmajaya.com & terangdarmajaya.co.id).",
-        "Implemented custom responsive UI animations, interactive components, and professional company branding.",
-        "Integrated Google Tag Manager and web telemetry for user behavior tracking and conversion analytics."
-      ],
-      "tags": [
-        "Web Design",
-        "Frontend Dev",
-        "UI Animation",
-        "Google Tag Manager",
-        "Production Deployment"
       ]
     },
     {
@@ -140,64 +79,6 @@
       ]
     },
     {
-      "name": "GuruAI",
-      "role": "Creator & AI Engineer",
-      "type": "AI Pedagogical Co-Pilot for Indonesian Educators",
-      "period": "2026",
-      "link": "https://github.com/timsurrealedu/guruAI",
-      "highlights": [
-        "Developed an intelligent co-pilot platform tailored for Indonesian educators aligned with the Kurikulum Merdeka framework.",
-        "Designed structured AI generation pipelines for RPP/Modul Ajar lesson plans, Bloom's cognitive taxonomy evaluations, and rubric generation.",
-        "Created teacher DNA profile onboarding system to customize pedagogical voice, methodology, and classroom constraints."
-      ],
-      "tags": [
-        "TypeScript",
-        "Next.js",
-        "LLM Prompt Engineering",
-        "Kurikulum Merdeka",
-        "Pedagogical AI"
-      ]
-    },
-    {
-      "name": "Sentinel",
-      "role": "Creator & Lead Developer",
-      "type": "Developer-Oriented Security Scanner Platform",
-      "period": "2025 — Present",
-      "link": "https://github.com/timsurrealedu/sentinel",
-      "highlights": [
-        "Architected repository scanning workflows to detect exposed API keys, secrets, and application vulnerability patterns.",
-        "Structured security findings with exact line-level references, severity ratings, and actionable remediation instructions.",
-        "Engineered background worker workloads and unified CLI/API interfaces for seamless DevSecOps integration."
-      ],
-      "tags": [
-        "DevSecOps",
-        "AppSec",
-        "TypeScript",
-        "Static Analysis",
-        "Security Tooling",
-        "API Design"
-      ]
-    },
-    {
-      "name": "CTF Competition Agent Skill & DevSecOps Labs",
-      "role": "Security Researcher & AI Tooling Developer",
-      "type": "Autonomous Agent Skills & CI/CD Security Automation",
-      "period": "2026",
-      "link": "https://github.com/timsurrealedu/ctf-competition",
-      "highlights": [
-        "Authored ctf-competition agent skill orchestrating long-running CTF investigations with persistent hypothesis tracking, token-budget discipline, and checkpoint compaction.",
-        "Implemented automated CI/CD security scanning workflows using GitHub Actions, SonarCloud quality gates, and Trivy vulnerability checks in SonarCloudTrivy and devsecblueprint."
-      ],
-      "tags": [
-        "AI Agent Skills",
-        "CTF",
-        "DevSecOps",
-        "GitHub Actions",
-        "Trivy",
-        "SonarCloud"
-      ]
-    },
-    {
       "name": "Stewie",
       "role": "Creator",
       "type": "CPU-First Automated Video Content Pipeline",
@@ -217,21 +98,42 @@
       ]
     },
     {
-      "name": "Obsidian Automation Engine",
-      "role": "Creator & Systems Developer",
-      "type": "Capture-Once Knowledge Ingestion & Organization Pipeline",
-      "period": "2026",
-      "link": "https://github.com/timsurrealedu/obsidianAutomation",
+      "name": "Automatic Trash Bin",
+      "role": "Hardware & Embedded Systems Developer",
+      "type": "Embedded Systems Prototype",
+      "period": "2025",
+      "link": "",
       "highlights": [
-        "Engineered an automated knowledge ingestion pipeline transforming raw unorganized notes, voice dictations, and whiteboard photos into structured second-brain notes.",
-        "Implemented batch AI processing with Claude Code for auto-summarization, bi-directional link generation ([[links]]), tag clustering, and Google Calendar event sync."
+        "Developed a sensor-driven waste bin that automatically opens and closes using an Arduino Uno microcontroller.",
+        "Designed and simulated the circuit architecture and enclosure concept in Tinkercad before physical hardware fabrication.",
+        "Programmed servo motor actuation coordinated with ultrasonic proximity sensors."
       ],
       "tags": [
-        "Knowledge Systems",
-        "Claude Code Batch",
-        "Shell Scripting",
-        "Multimodal Ingestion",
-        "Obsidian"
+        "Arduino Uno",
+        "Sensors",
+        "Motors",
+        "Tinkercad",
+        "Embedded Systems"
+      ]
+    },
+    {
+      "name": "Nolen",
+      "role": "Cybersecurity & Detection Lead",
+      "type": "Open-Source Linux Security Telemetry Platform",
+      "period": "2026",
+      "link": "https://github.com/timsurrealedu/nolen",
+      "highlights": [
+        "Authored complete threat model, telemetry security requirements, detection-as-code rules, and MITRE ATT&CK mappings.",
+        "Designed deterministic SSH-compromise correlation engine and false-positive boundaries over NATS JetStream.",
+        "Built safe attack simulation suite and passed 52 automated tests plus 6 offline scenarios producing confidence-80 incidents from 12 unique evidence events."
+      ],
+      "tags": [
+        "AppSec",
+        "Threat Modeling",
+        "Detection Engineering",
+        "Node.js",
+        "NATS JetStream",
+        "MITRE ATT&CK"
       ]
     }
   ],
@@ -263,8 +165,7 @@
       "location": "Jakarta, Indonesia",
       "highlights": [
         "Practiced backend development (Node.js, Express, Prisma, JWT authentication, REST APIs).",
-        "Formulated program proposals for technical subdivisions and presented in front of senior evaluators.",
-        "Authored proposal for DevSecOps CI/CD standardization using GitHub Actions, SonarCloud, and Trivy."
+        "Formulated program proposals for technical subdivisions and presented in front of senior evaluators."
       ]
     },
     {
@@ -288,39 +189,12 @@
       ]
     },
     {
-      "role": "Member",
-      "organization": "Google Developer Groups on Campus (GDG on Campus)",
-      "period": "Nov 2025 — Present",
-      "location": "Jakarta, Indonesia",
-      "highlights": [
-        "Active member participating in developer workshops, cloud & AI technologies, and campus tech community events."
-      ]
-    },
-    {
       "role": "Activist (Small Group Coordination)",
       "organization": "Persekutuan Oikumene (PO)",
       "period": "Nov 2025 — Present",
       "location": "Jakarta, Indonesia",
       "highlights": [
         "Tracked weekly small group progress, reminded group leaders to submit updates, and supported internal accountability."
-      ]
-    },
-    {
-      "role": "Member",
-      "organization": "Cyber Security Community (CSC)",
-      "period": "Nov 2025 — Present",
-      "location": "Jakarta, Indonesia",
-      "highlights": [
-        "Active member in campus cybersecurity peer community focused on digital defense, CTF challenges, and knowledge sharing."
-      ]
-    },
-    {
-      "role": "Member",
-      "organization": "ISACA Student Group (ISG)",
-      "period": "Nov 2025 — Present",
-      "location": "Jakarta, Indonesia",
-      "highlights": [
-        "Student member participating in IT audit workshops and cybersecurity governance events."
       ]
     }
   ],
@@ -339,6 +213,16 @@
     }
   ],
   "certifications": [
+    {
+      "title": "BNCC CSR 2026 Certificate of Appreciation (Media Partner Staff)",
+      "issuer": "Bina Nusantara Computer Club",
+      "year": "2026"
+    },
+    {
+      "title": "CTF Meta4sec 3.0 Certificate of Participation",
+      "issuer": "Meta4sec & Redlimit",
+      "year": "2026"
+    },
     {
       "title": "ARISE Bootcamp IT Audit Certificate",
       "issuer": "ISACA Student Group BINUS University",

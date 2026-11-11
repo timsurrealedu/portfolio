@@ -116,24 +116,16 @@ Cyber Security student at Bina Nusantara University combining practical depth in
 *Bina Nusantara Computer Club (BNCC)* | *Nov 2025 — Present*
 - Developed backend applications and practiced CRUD, JWT authentication, and database integration.
 - Authored program proposals for technical subdivisions and presented in front of senior evaluators.
-- Designed DevSecOps CI/CD proposal integrating GitHub Actions, SonarCloud, and Trivy.
 - Conducted organizational problem analysis using SWOT frameworks and member survey data.
 
-### Member — Google Developer Groups on Campus (GDG on Campus)
-*Google Developer Groups on Campus* | *Nov 2025 — Present*
-- Active member participating in developer workshops, cloud architecture, and modern AI/web technology ecosystems.
+### Media Partner Team Staff — BNCC CSR 2026
+*Bina Nusantara Computer Club (BNCC)* | *2026*
+- Supported external communications and media partner visibility for BNCC CSR 2026.
+- Awarded Certificate of Appreciation as Media Partner Staff.
 
 ### Activist — Persekutuan Oikumene (PO)
 *Persekutuan Oikumene (PO)* | *Nov 2025 — Present*
 - Tracked weekly small group progress, reminded leaders to provide updates, and supported internal group accountability.
-
-### Member — Cyber Security Community (CSC)
-*Cyber Security Community (CSC)* | *Nov 2025 — Present*
-- Active member in campus cybersecurity peer community focused on digital defense, CTF challenges, and knowledge sharing.
-
-### Member — ISACA Student Group (ISG)
-*ISACA Student Group (ISG)* | *Nov 2025 — Present*
-- Student member participating in IT audit workshops and cybersecurity governance events.
 
 ### Guest Speaker — Artificial Intelligence Fundamentals
 *SMA Wardaya* | *2025*
@@ -143,7 +135,8 @@ Cyber Security student at Bina Nusantara University combining practical depth in
 
 ## CERTIFICATIONS & RECOGNITION
 
+- **BNCC CSR 2026 Certificate of Appreciation (Media Partner Staff)** — Bina Nusantara Computer Club (2026)
+- **CTF Meta4sec 3.0 Certificate of Participation** — Meta4sec & Redlimit (2026)
 - **ARISE Bootcamp IT Audit Certificate** — ISACA Student Group BINUS University (2026)
 - **BNCC Technology Project Member Back-End Development Certificate** — BNCC (2026)
 - **IT FAIR XIV UI/UX Design Competition Certificate of Participation** — HIMATIF UIN Bandung (2026)
-- **Best Proposed Event Plan Team** — BNCC US Program
