@@ -4,10 +4,11 @@ import { FormEvent, useEffect, useRef, useState } from "react";
 import { credentials, engagements, experience, organizations, projects, sections, type SectionId } from "@/lib/portfolio";
 
 const skills = [
-  ["security", "AppSec · DevSecOps · Trivy · security architecture"],
-  ["backend", "Node.js · Express · Prisma · REST APIs · authentication"],
-  ["systems", "Linux · networking · Oracle Cloud · self-hosting · NixOS"],
-  ["people", "team leadership · public speaking · program planning"],
+  ["security", "AppSec · DevSecOps · Threat Modeling · Trivy · SonarCloud · MITRE ATT&CK"],
+  ["ai & agents", "Reasonix · Claude Code · Codex · Prompt Caching · Model Benchmarking · Custom Skills"],
+  ["backend & web", "TypeScript · Next.js · Node.js · Express · Prisma · Supabase · PostgreSQL"],
+  ["systems", "Linux (Arch / NixOS) · Oracle Cloud · Tailscale · Bubblewrap · Self-Hosting"],
+  ["people", "Team leadership · Public speaking · Program planning · Technical writing"],
 ] as const;
 
 export function PortfolioShell() {
@@ -43,7 +44,17 @@ export function PortfolioShell() {
 
   function run(raw: string) {
     const value = raw.trim().toLowerCase();
-    const projectIndex = projects.findIndex((project) => value === `open ${project.slug}` || value === project.slug);
+    const projectIndex = projects.findIndex(
+      (project) =>
+        value === `open ${project.slug}` ||
+        value === project.slug ||
+        (project.slug === "lifeos" && (value === "open noema" || value === "noema")) ||
+        (project.slug === "automatic-trash-bin" &&
+          (value === "open automatic trashbin" ||
+            value === "automatic trashbin" ||
+            value === "open trashbin" ||
+            value === "trashbin"))
+    );
     if (!value) return;
     if (projectIndex >= 0) {
       setSelected(projectIndex);
@@ -75,6 +86,7 @@ export function PortfolioShell() {
           <span>timsurreal<span className="dim">@portfolio</span></span>
         </a>
         <div className="topbar-path" aria-hidden="true">~/public/{section}<span className="cursor">_</span></div>
+        <a className="topbar-link" href="/cv" style={{ borderRight: "1px solid var(--line)", paddingRight: "1rem", paddingLeft: "1rem" }}>cv 📄</a>
         <a className="topbar-link" href="https://github.com/timsurrealedu" target="_blank" rel="noreferrer">github ↗</a>
       </header>
 
@@ -87,6 +99,9 @@ export function PortfolioShell() {
               <span className="tree-branch">├─</span><span className="file-name">{item.label}</span><span className="file-ext">.{item.id === "projects" ? "dir" : "md"}</span>
             </button>
           ))}
+          <a href="/cv" style={{ display: "flex", alignItems: "center", gap: ".4rem", padding: ".6rem 1rem .6rem .65rem", textDecoration: "none", color: "var(--yellow)", fontWeight: "bold" }}>
+            <span className="tree-branch" style={{ color: "var(--muted)" }}>└─</span><span className="file-name">cv</span><span className="file-ext" style={{ color: "var(--muted)" }}>.md</span> <span style={{ marginLeft: "auto", fontSize: ".8rem" }}>📄 VIEW/EDIT</span>
+          </a>
         </nav>
         <div className="tree-meta">
           <span>HOST</span><strong>Jakarta, ID</strong>
@@ -170,6 +185,7 @@ function Home({ onProjects }: { onProjects: () => void }) {
           <p className="lede">I design security detections, build backend services and developer tools, operate Linux and cloud infrastructure, prototype user-centered products, and automate technical media workflows.</p>
           <div className="hero-actions">
             <button className="primary-action" onClick={onProjects}>./explore-work</button>
+            <a href="/cv" style={{ background: "var(--yellow)", color: "var(--bg)", borderColor: "var(--yellow)" }}>view & edit cv 📄</a>
             <a href="https://github.com/timsurrealedu" target="_blank" rel="noreferrer">git remote -v ↗</a>
           </div>
         </div>
@@ -268,7 +284,7 @@ function About() {
       <header className="section-header"><div><p className="path-label">~/about.md</p><h1>About the operator</h1></div><p>Cyber Security student at Bina Nusantara University, based in Jakarta.</p></header>
       <div className="about-grid">
         <div className="about-copy"><p>I’m Timothy Sebastian Darmawan, or <code>timsurreal</code> online. I like understanding systems by building them, breaking them, troubleshooting them, and making the next version less fragile.</p><p>My interests meet where software touches the real world: application security, backend systems, Linux, cloud infrastructure, networking, privacy, and teams that need someone to own the messy middle.</p><dl className="about-contacts"><div><dt>EMAIL</dt><dd><a href="mailto:td522637@gmail.com">td522637@gmail.com</a></dd></div><div><dt>WHATSAPP</dt><dd><a href="https://wa.me/6287777179775" target="_blank" rel="noreferrer">+62 87777179775 ↗</a></dd></div><div><dt>DISCORD</dt><dd>@timsurreal</dd></div></dl></div>
-        <dl className="facts"><div><dt>EDUCATION</dt><dd>B.Sc. Cyber Security<br />BINUS · expected 2029<br />GPA · 3.97</dd></div><div><dt>LANGUAGES</dt><dd>Indonesian · native<br />English · IELTS 8.0<br />Mandarin · basic</dd></div><div><dt>COMMUNITIES</dt><dd>BNCC · PO · CSC · ISG<br />YCC SMAK 1 · GDG on Campus</dd></div></dl>
+        <dl className="facts"><div><dt>EDUCATION</dt><dd>B.Sc. Cyber Security<br />BINUS · expected 2029<br />GPA · 3.97</dd></div><div><dt>LANGUAGES</dt><dd>Indonesian · native<br />English · IELTS 8.0<br />Mandarin · basic</dd></div><div><dt>COMMUNITIES</dt><dd>BNCC · PO</dd></div></dl>
       </div>
       <div className="skill-matrix">{skills.map(([name, value], index) => <div key={name}><span>0{index + 1}</span><h2>{name}</h2><p>{value}</p></div>)}</div>
       <p className="arch-note">$ uname -a<br /><strong>Arch · Fedora · CachyOS · NixOS · Windows 11</strong><br /><em>yes, I use Arch btw.</em></p>
