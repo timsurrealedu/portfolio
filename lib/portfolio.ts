@@ -86,6 +86,7 @@ export const projects: readonly Project[] = [
     summary: "A $0 Oracle Cloud platform built as code: Terraform networking and firewalls, an Ansible-hardened server, Telegram alerting, and live network demos behind Caddy.",
     detail: "Imported a hand-built VCN and server into Terraform without recreating them, then added a private subnet, NAT and service gateways, and per-role network security groups. Ansible roles harden SSH, keep Oracle's metadata firewall rules while managing iptables, and deploy containerized apps behind Caddy with a strict Content-Security-Policy. Prometheus and Grafana alert to Telegram, including on Oracle's idle-reclamation rule; a second instance is retried automatically through a launch-only instance-principal policy. Includes a recorded security review (SSRF bypasses, header injection, container isolation), a verified backup restore drill, and an in-place Ubuntu LTS upgrade.",
     stack: ["Oracle Cloud", "Terraform", "Ansible", "Caddy", "Docker", "Prometheus", "Grafana", "Tailscale"],
+    href: "https://github.com/timsurrealedu/oci-homelab",
   },
 ];
 
