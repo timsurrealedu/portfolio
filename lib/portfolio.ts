@@ -251,6 +251,17 @@ export const engagements = [
 
 export const credentials: readonly Credential[] = [
   {
+    title: "CTF Meta4sec 3.0 Finalist",
+    issuer: "Meta4sec & Redlimit",
+    kind: "Competition",
+    year: "2026",
+    media: {
+      src: "/portfolio/meta4sec-ctf-finalist-certificate.jpg",
+      alt: "Finalist certificate for the CTF Meta4sec 3.0 competition awarded to Timothy Sebastian Darmawan",
+      caption: "Finalist certificate in CTF Meta4sec 3.0, organized by Meta4sec and Redlimit (Jakarta, 28 August 2026).",
+    },
+  },
+  {
     title: "ISACA Workshop Certificate",
     issuer: "ISACA Student Group",
     kind: "Workshop",
